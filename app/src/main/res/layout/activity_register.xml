@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/img_nocontent"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="-80dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:hint="Enter your firstname"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="-80dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Middle Name"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:hint="Enter your middlename"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="-80dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:hint="Enter your lastname"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="-80dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:hint="Enter your username"
+                android:textSize="15sp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Enter your email"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/rounded_edittext"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Enter your phone number"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:inputType="phone"
+        android:background="@drawable/rounded_edittext"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Enter your password"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/rounded_edittext"
+        android:paddingLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Re-enter your password"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/rounded_edittext"
+        android:paddingLeft="10dp"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_shape"
+        android:backgroundTint="#6200EE"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="Cancel"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_shape"/>
+</LinearLayout>
