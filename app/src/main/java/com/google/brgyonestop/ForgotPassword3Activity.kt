@@ -1,18 +1,15 @@
 package com.google.brgyonestop
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
-class ForgotPassword3Activity : AppCompatActivity() {
+
+class ForgotPassword3Activity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_forgot_password3)
 
         val image_f3backarrow = findViewById<ImageView>(R.id.imageview_f3backarrow)

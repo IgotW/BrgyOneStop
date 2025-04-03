@@ -81,19 +81,21 @@
         android:background="@drawable/rounded_edittext"
         android:paddingLeft="10dp"/>
     <Button
+        android:id="@+id/button_register2_next"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="Register"
+        android:text="Next"
         android:layout_gravity="center"
         android:background="@drawable/rounded_shape"
         android:backgroundTint="#6200EE"
         android:textColor="@color/white"/>
     <Button
+        android:id="@+id/button_register2_cancel"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:text="Cancel"
+        android:text="Back"
         android:layout_gravity="center"
         android:background="@drawable/rounded_shape"/>
 

@@ -10,11 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class ForgotPasswordActivity : AppCompatActivity() {
+class ForgotPasswordActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
-        enableEdgeToEdge()
 
         val image_f1backarrow = findViewById<ImageView>(R.id.imageview_f1backarrow)
         val button_resetpassword = findViewById<Button>(R.id.button_resetpassword)
