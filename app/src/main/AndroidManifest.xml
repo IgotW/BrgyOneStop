@@ -13,7 +13,10 @@
         android:theme="@style/Theme.BrgyOneStop"
         tools:targetApi="31">
         <activity
-            android:name=".ui.theme.Register2Activity"
+            android:name=".ForgotPassword2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Register2Activity"
             android:exported="false" />
         <activity
             android:name=".ForgotPasswordActivity"
@@ -27,17 +30,6 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.BrgyOneStop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

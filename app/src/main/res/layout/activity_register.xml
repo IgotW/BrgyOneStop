@@ -105,7 +105,7 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:text="Register"
+        android:text="Next"
         android:layout_gravity="center"
         android:background="@drawable/rounded_shape"
         android:backgroundTint="#6200EE"
@@ -113,7 +113,7 @@
     <Button
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="Cancel"
         android:layout_gravity="center"
         android:background="@drawable/rounded_shape"/>
