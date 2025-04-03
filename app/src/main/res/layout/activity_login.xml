@@ -9,19 +9,19 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
-        android:src="@drawable/img_nocontent"
+        android:src="@drawable/brgyonestop_logo"
         android:layout_marginTop="50dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome Back"
+        android:text="Sign In"
         android:textSize="30sp"
         android:textColor="#0000EE"
-        android:layout_marginTop="-20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginBottom="30dp"
         android:layout_gravity="center"
         android:textStyle="bold"
         android:letterSpacing=".1"/>
