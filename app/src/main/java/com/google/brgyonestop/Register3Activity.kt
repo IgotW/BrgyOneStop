@@ -3,6 +3,7 @@ package com.google.brgyonestop
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,11 +15,18 @@ class Register3Activity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register3)
 
-        val textview_tentative = findViewById<TextView>(R.id.textview_tentative)
+        val button_register3_next = findViewById<Button>(R.id.button_register3_next)
+        val button_register3_cancel = findViewById<Button>(R.id.button_register3_cancel)
 
-        textview_tentative.setOnClickListener {
+        button_register3_next.setOnClickListener {
             startActivity(
-                Intent(this, Register2Activity::class.java)
+                Intent(this, LoginActivity::class.java)
+            )
+        }
+
+        button_register3_cancel.setOnClickListener {
+            startActivity(
+                Intent(this, RegisterActivity::class.java)
             )
         }
     }
