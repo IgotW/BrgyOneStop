@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.BrgyOneStop" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.BrgyOneStop" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/crimson</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/royal_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Accent color -->
+        <item name="colorTertiary">@color/mustard_yellow</item>
+    </style>
 </resources>
