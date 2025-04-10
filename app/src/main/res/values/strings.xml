@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BrgyOneStop</string>
+
+    <string-array name="my_dropdown_items">
+        <item>Noise Disturbance</item>
+        <item>Garbage Issues</item>
+        <item>Road Obstructions</item>
+        <item>Street Lighting</item>
+    </string-array>
 </resources>
