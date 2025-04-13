@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/leftarrow"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:text="Emergency Help"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Choose who you need to contact in this emergency. Press the button below in case of an emergency to alert barangay responders."
+        android:textStyle="italic"
+        android:textColor="#686565"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="15sp"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Address:"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Note: Your location will be shared when you make a call or alert."
+        android:textStyle="italic"
+        android:textColor="#686565"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="13sp"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Who to Contact?"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/secondary_button"
+        android:text="CALL POLICE"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/secondary_button"
+        android:text="CALL FIRE DEPARTMENT"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/secondary_button"
+        android:text="CALL AMBULANCE"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/secondary_button"
+        android:text="ALERT BARANGAY TANOD"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Note: Use this button for genuine emergencies only. Misuse may result in penalties."
+        android:textStyle="italic"
+        android:textColor="#686565"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="13sp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
