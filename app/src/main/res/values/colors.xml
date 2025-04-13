@@ -5,13 +5,19 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="primary">#0033A0</color>
     <color name="secondary">#CE1126</color>
     <color name="third">#FFCC00</color>
+
     <color name="secondary_button">#CE1126</color>
     <color name="primary_button">#0033A0</color>
     <color name="second_background">#E5EBF5</color>
+
+
+    <color name="crimson">#DC143C</color>
+    <color name="royal_blue">#4169E1</color>
+    <color name="mustard_yellow">#FFDB58</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 
 </resources>
