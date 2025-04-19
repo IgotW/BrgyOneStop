@@ -13,4 +13,11 @@
         3. Upload Required Documents: Some services may require you to upload documents before your appointment. Be sure to have these ready.\n\n
         4. Confirm Your Appointment: Once you’ve entered your details, we'll show you a summary of your appointment. Review it and confirm your booking. You will receive a notification with your appointment details.
     </string>
+    <string name="reminders_text">
+        • Arrive at least 10 minutes before your scheduled appointment time.\n\n
+        • Bring all required documents listed below along with a valid ID for verification.\n\n
+        • If you are unable to attend, please reschedule or cancel your appointment ahead of time.\n\n
+        • Late arrivals may need to rebook based on staff availability.
+    </string>
+
 </resources>
