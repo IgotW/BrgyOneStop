@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.brgyonestop.models.Announcement
 
 class AnnouncementAdapter(
     private val announcements: List<Announcement>
