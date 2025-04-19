@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/leftarrow"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="205dp"
+            android:layout_height="30dp"
+            android:text="Schedule Appointment"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="75dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="730dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="730dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:text="Welcome to the Brgy One-Stop appointment scheduling page! To help you efficiently access the services you need, please follow the steps below to book your appointment."
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/justifiedinstructionText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="35dp"
+                android:paddingRight="17dp"
+                android:text="@string/instructions_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:paddingLeft="17dp"
+                android:text="Reminders:"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/justifiedreminderText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="39dp"
+                android:paddingRight="17dp"
+                android:text="@string/reminders_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:text="Need help? If you have any questions or need assistance, feel free to check out our FAQs or contact us at [contact number/email]."
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/schedule_button"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="19dp"
+                android:backgroundTint="@color/primary_button"
+                android:fontFamily="sans-serif-condensed"
+                android:letterSpacing="0.1"
+                android:text="SCHEDULE APPOINTMENT" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
