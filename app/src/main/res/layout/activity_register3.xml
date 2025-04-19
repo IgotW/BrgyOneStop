@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register3Activity"
+    tools:context=".activity.Register3Activity"
     android:orientation="vertical">
 
     <ScrollView
@@ -33,6 +33,7 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="5dp"/>
             <EditText
+                android:id="@+id/edittext_reg_purok"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:hint="Enter Purok"
@@ -50,6 +51,7 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="5dp"/>
             <EditText
+                android:id="@+id/edittext_reg_street"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:hint="Enter Street"
@@ -67,12 +69,12 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="5dp"/>
             <EditText
+                android:id="@+id/edittext_reg_barangay"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:hint="Enter Barangay"
                 android:textSize="15dp"
                 android:layout_gravity="center"
-                android:inputType="phone"
                 android:background="@drawable/rounded_edittext"
                 android:paddingLeft="15dp"/>
             <TextView
@@ -84,12 +86,12 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="5dp"/>
             <EditText
+                android:id="@+id/edittext_reg_municipality"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:hint="Enter Municipality"
                 android:textSize="15dp"
                 android:layout_gravity="center"
-                android:inputType="phone"
                 android:background="@drawable/rounded_edittext"
                 android:paddingLeft="15dp"/>
             <TextView
@@ -101,12 +103,12 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="5dp"/>
             <EditText
+                android:id="@+id/edittext_reg_province"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:hint="Enter Province"
                 android:textSize="15dp"
                 android:layout_gravity="center"
-                android:inputType="phone"
                 android:background="@drawable/rounded_edittext"
                 android:paddingLeft="15dp"/>
             <TextView
@@ -118,12 +120,12 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="5dp"/>
             <EditText
+                android:id="@+id/edittext_reg_zipcode"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:hint="Enter Zip Code"
                 android:textSize="15dp"
                 android:layout_gravity="center"
-                android:inputType="phone"
                 android:background="@drawable/rounded_edittext"
                 android:paddingLeft="15dp"/>
             <Button

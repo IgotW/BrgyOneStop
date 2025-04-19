@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register2Activity"
+    tools:context=".activity.Register2Activity"
     android:orientation="vertical">
 
     <TextView
@@ -26,9 +26,10 @@
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"/>
     <EditText
+        android:id="@+id/edittext_reg_firstname"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:hint="Enter your username"
+        android:hint="Enter your firstname"
         android:textSize="15dp"
         android:layout_gravity="center"
         android:inputType="textEmailAddress"
@@ -43,6 +44,7 @@
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"/>
     <EditText
+        android:id="@+id/edittext_reg_middlename"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Enter Middle Name"
@@ -60,12 +62,12 @@
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"/>
     <EditText
+        android:id="@+id/edittext_reg_lastname"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="Enter Last Name"
         android:textSize="15dp"
         android:layout_gravity="center"
-        android:inputType="phone"
         android:background="@drawable/rounded_edittext"
         android:paddingLeft="15dp"/>
     <TextView
@@ -77,12 +79,12 @@
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"/>
     <EditText
+        android:id="@+id/edittext_reg_suffix"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:hint="e.g Jr., Sr., II"
         android:textSize="15dp"
         android:layout_gravity="center"
-        android:inputType="phone"
         android:background="@drawable/rounded_edittext"
         android:paddingLeft="15dp"/>
     <Button

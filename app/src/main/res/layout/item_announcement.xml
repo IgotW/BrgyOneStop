@@ -15,30 +15,32 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Title -->
+        <!-- Title (Crimson) -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
             android:textColor="@color/crimson"
+            android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <!-- Date -->
+        <!-- Date (Royal Blue) -->
         <TextView
             android:id="@+id/tvDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="@color/royal_blue"/>
+            android:textColor="@color/royal_blue"
+            android:textSize="14sp"/>
 
-        <!-- Content -->
+        <!-- Content (Black) -->
         <TextView
             android:id="@+id/tvContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
