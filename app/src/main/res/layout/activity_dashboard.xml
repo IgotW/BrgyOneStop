@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:layout_width="70dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
         android:src="@drawable/brgyonestop_logowithword"
         android:layout_gravity="center"/>
     <ScrollView
@@ -25,7 +25,7 @@
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/profile_user"/>
                 <TextView
-                    android:layout_width="190dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_gravity="center_vertical"
                     android:text="   Francine Mecolle A. Duarte"
@@ -35,7 +35,7 @@
                     android:layout_height="30dp"
                     android:src="@drawable/notif"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="100dp"/>
+                    android:layout_marginLeft="50dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
