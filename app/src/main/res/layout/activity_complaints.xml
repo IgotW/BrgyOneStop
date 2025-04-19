@@ -4,54 +4,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Feedback Type Dropdown -->
+        <!-- Complaint Type Dropdown -->
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/royal_blue">
+            app:boxStrokeColor="@color/royal_blue"
+            android:layout_marginBottom="16dp">
 
             <AutoCompleteTextView
-                android:id="@+id/actvFeedbackType"
+                android:id="@+id/actvComplaintType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Feedback Type"
+                android:hint="Select Complaint Type"
                 android:inputType="none"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Message -->
+        <!-- Description Field -->
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             app:boxStrokeColor="@color/royal_blue">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etMessage"
+                android:id="@+id/etDescription"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:hint="Your Message"
-                android:gravity="start"
-                android:inputType="textMultiLine"/>
+                android:hint="Describe your complaint..."
+                android:inputType="textMultiLine"
+                android:gravity="start|top"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Submit Button -->
+        <!-- Attachment Button (Mustard Yellow) -->
+        <Button
+            android:id="@+id/btnAttach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Attach Photo/Video"
+            android:backgroundTint="@color/mustard_yellow"
+            android:textColor="@color/black"/>
+
+        <!-- Submit Button (Crimson) -->
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Submit Feedback"
-            android:backgroundTint="@color/mustard_yellow"
-            android:textColor="@color/black"/>
+            android:layout_marginTop="32dp"
+            android:text="Submit Complaint"
+            android:backgroundTint="@color/crimson"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 </ScrollView>
