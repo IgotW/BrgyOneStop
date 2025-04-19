@@ -8,7 +8,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,15 +80,12 @@
                     android:fontFamily="sans-serif-condensed"
                     android:textSize="17sp"
                     android:layout_marginTop="10dp"/>
-
                 <Spinner
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@color/white"
-                    android:entries="@array/my_dropdown_items"
+                    android:entries="@array/filecomplaint_items"
                     android:layout_marginTop="11dp"/>
-
-                <!-- Complaint Details -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
