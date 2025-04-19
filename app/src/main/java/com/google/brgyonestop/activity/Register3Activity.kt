@@ -102,6 +102,7 @@ class Register3Activity : Activity() {
                             runOnUiThread {
                                 Toast.makeText(this@Register3Activity, "Registered Successfully", Toast.LENGTH_SHORT).show()
                                 Log.d("API_SUCCESS", response.body().toString())
+
                                 startActivity(
                                     Intent(this@Register3Activity, LoginActivity::class.java)
                                 )
@@ -129,9 +130,6 @@ class Register3Activity : Activity() {
                     Log.e("API_EXCEPTION", e.toString())
                 }
             }
-            startActivity(
-                Intent(this, LoginActivity::class.java)
-            )
         }
 
 

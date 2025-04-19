@@ -23,6 +23,7 @@
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"/>
     <EditText
+        android:id="@+id/edittext_login_username"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -40,6 +41,7 @@
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"/>
     <EditText
+        android:id="@+id/edittext_login_password"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
