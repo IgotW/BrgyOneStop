@@ -23,4 +23,30 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="75dp"/>
     </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Welcome to the Brgy One-Stop appointment scheduling page! To help you efficiently access the services you need, please follow the steps below to book your appointment."
+                android:padding="15dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-condensed"/>
+            <TextView
+                android:id="@+id/justifiedText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/instructions_text"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                android:textSize="16sp"
+                android:padding="16dp"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

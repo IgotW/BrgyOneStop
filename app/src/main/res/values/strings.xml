@@ -7,4 +7,10 @@
         <item>Road Obstructions</item>
         <item>Street Lighting</item>
     </string-array>
+    <string name="instructions_text">
+        1. Select the Service: Choose the service you need from the list below. Each service may have specific requirements or documents, so please check the details carefully.\n\n
+        2. Choose a Date and Time: Pick a date and time that works for you from the available slots. Make sure to book your appointment in advance to avoid long waiting times.\n\n
+        3. Upload Required Documents: Some services may require you to upload documents before your appointment. Be sure to have these ready.\n\n
+        4. Confirm Your Appointment: Once you’ve entered your details, we'll show you a summary of your appointment. Review it and confirm your booking. You will receive a notification with your appointment details.
+    </string>
 </resources>
