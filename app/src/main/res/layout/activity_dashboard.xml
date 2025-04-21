@@ -25,10 +25,12 @@
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/profile_user"/>
                 <TextView
+                    android:id="@+id/textview_dashboard_name"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_gravity="center_vertical"
-                    android:text="   Francine Mecolle A. Duarte"
+                    android:text="Francine Mecolle A. Duarte"
+                    android:layout_marginLeft="8dp"
                     android:textSize="15sp"/>
                 <ImageView
                     android:layout_width="30dp"

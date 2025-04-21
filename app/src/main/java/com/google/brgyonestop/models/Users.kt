@@ -14,5 +14,6 @@ data class Users(
     val barangay: String,
     val municipality: String,
     val province: String,
-    val zipCode: String
+    val zipCode: String,
+    val role: String
 )
