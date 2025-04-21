@@ -51,7 +51,6 @@
                 android:justificationMode="inter_word"
                 android:paddingLeft="35dp"
                 android:paddingRight="17dp"
-                android:text="@string/instructions_text"
                 android:textSize="14sp" />
 
             <TextView
@@ -72,7 +71,6 @@
                 android:justificationMode="inter_word"
                 android:paddingLeft="39dp"
                 android:paddingRight="17dp"
-                android:text="@string/reminders_text"
                 android:textSize="14sp" />
 
             <TextView

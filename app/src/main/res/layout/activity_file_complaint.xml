@@ -43,6 +43,7 @@
                 android:textColor="#686565"
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="15sp"
+                android:paddingVertical="10dp"
                 android:padding="10dp"
                 android:layout_gravity="center"/>
             <LinearLayout
@@ -78,7 +79,7 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:background="@color/white"
-                    android:entries="@array/my_dropdown_items" />
+                    android:entries="@array/filecomplaint_items" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
