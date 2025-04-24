@@ -22,6 +22,129 @@
             android:textColor="@color/black"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="100dp"/>
-
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="#FFFFFF"
+        android:layout_gravity="center">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="33dp"
+            android:hint="Search Service"
+            android:background="@android:color/transparent"
+            android:paddingStart="8dp"
+            android:textColor="#000"
+            android:textColorHint="#888"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_search"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="290dp"
+                android:background="@color/second_background"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:text="SE039245GBT"
+                        android:textSize="25sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:text="view details"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textStyle="italic"
+                        android:layout_marginLeft="100dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="30dp"
+                    android:text="Service Type:   jhvgctfcgvhb"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="italic"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="30dp"
+                    android:text="Location:   jbbhubjnkk "
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="italic"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="230dp"
+                    android:layout_height="30dp"
+                    android:text="Preferred Date:   uhvjhbkjnkjn"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="italic"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="30dp"
+                    android:text="Preferred Time:   uvhvgvhjbkjn"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="italic"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+                <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:text="Status: "
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textStyle="italic"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/greencircle"
+                        android:layout_marginTop="15dp"/>
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:text="Completed"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textStyle="italic"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

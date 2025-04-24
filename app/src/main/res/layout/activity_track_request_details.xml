@@ -3,5 +3,149 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/leftarrow"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:text="Track Request"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:background="@color/second_background"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="190dp"
+                    android:layout_height="40dp"
+                    android:text="SE039245GBT"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="30dp"
+                    android:text="Account Name:   jhvgctfcgvhb"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="230dp"
+                    android:layout_height="30dp"
+                    android:text="Service Type:   jhvgctfcgvhb"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"/>
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="30dp"
+                    android:text="Location:   jbbhubjnkk "
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"/>
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="30dp"
+                    android:text="Preferred Date:   uhvjhbkjnkjn"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:text="Preferred Time:   uvhvgvhjbkjn"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"/>
+                <TextView
+                    android:layout_width="310dp"
+                    android:layout_height="130dp"
+                    android:text="Request Details:   \n      wvkc jsd njein qfnowieqlm wdqoweiw efnri tjnnvkevsdcmdncwe eriugerin dfgdfdfg sfgdfgdfg guightvdnd aldqojqoijdwefjenfuvhvgvhjbkjn"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:justificationMode="inter_word"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:text="Uploaded Image/Video"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30dp">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:src="@drawable/imagesample"/>
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="110dp"
+                        android:src="@drawable/imagesample"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:text="Status: "
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/greencircle"
+                        android:layout_marginTop="15dp"/>
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:text="Completed"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
 
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

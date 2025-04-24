@@ -1,7 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/leftarrow"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/redcircle"
+                    android:text="O"
+                    android:textSize="96sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center" />
+
+                <!-- Office Name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office 1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Description Card -->
+                <TextView
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/second_background"
+                    android:text="Description of the office: example example example example..."
+                    android:padding="12dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+
+                <!-- Location Card -->
+                <TextView
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/second_background"
+                    android:text="Location\nDescription of the office: example example example..."
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+
+                <!-- Office Hours Card -->
+                <TextView
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/second_background"
+                    android:text="Office Hours\nDescription of the office: example example example..."
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"/>
+
+                <!-- Contact Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center">
+
+                    <!-- Phone 1 -->
+                    <LinearLayout
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:layout_gravity="center"
+                        android:background="@color/second_background">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_call"
+                            app:tint="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  09XX XXX XXXX\n  Mobile"
+                            android:textColor="#000"
+                            android:paddingStart="8dp" />
+                    </LinearLayout>
+
+                    <!-- Phone 2 -->
+                    <LinearLayout
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:layout_gravity="center"
+                        android:background="@color/second_background">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_call"
+                            app:tint="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  099X XXX XXXX\n  Mobile"
+                            android:textColor="#000"
+                            android:paddingStart="8dp" />
+                    </LinearLayout>
+
+                    <!-- Landline -->
+                    <LinearLayout
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:background="@color/second_background">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_call"
+                            app:tint="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  (032) 424 XXXX\n  Telephone"
+                            android:textColor="#000"
+                            android:paddingStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
