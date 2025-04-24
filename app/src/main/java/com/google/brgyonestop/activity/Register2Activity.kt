@@ -39,16 +39,34 @@ class Register2Activity : Activity() {
         }
 
         button_register2_next.setOnClickListener {
+            val firstname = edittext_reg_firstname.text.toString()
+            val middlename = edittext_reg_middlename.text.toString()
+            val lastname = edittext_reg_lastname.text.toString()
+            val suffix = edittext_reg_suffix.text.toString()
+
+            var hasError = false
+
+            if(firstname.isEmpty()){
+                edittext_reg_firstname.error = "Firstname is required"
+                hasError = true
+            }
+            if (lastname.isEmpty()){
+                edittext_reg_lastname.error = "Lastname is required"
+                hasError = true
+            }
+
+            if (hasError) return@setOnClickListener
+
             startActivity(
                 Intent(this, Register3Activity::class.java).apply {
                     putExtra("username", username)
                     putExtra("email", email)
                     putExtra("phone", phone)
                     putExtra("password", password)
-                    putExtra("firstname", edittext_reg_firstname.text.toString())
-                    putExtra("middlename", edittext_reg_middlename.text.toString())
-                    putExtra("lastname", edittext_reg_lastname.text.toString())
-                    putExtra("suffix", edittext_reg_suffix.text.toString())
+                    putExtra("firstname", firstname)
+                    putExtra("middlename", middlename)
+                    putExtra("lastname", lastname)
+                    putExtra("suffix", suffix)
                 }
             )
         }
