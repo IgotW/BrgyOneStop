@@ -29,7 +29,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="550dp"
             android:orientation="vertical">
 
             <TextView
@@ -44,15 +44,46 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/justifiedinstructionText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
                 android:justificationMode="inter_word"
                 android:paddingLeft="35dp"
                 android:paddingRight="17dp"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:text="1. Select the Service: Choose the service you need from the list below. Each service may have specific requirements or documents, so please check the details carefully."/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="35dp"
+                android:paddingRight="17dp"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:text="2. Choose a Date and Time: Pick a date and time that works for you from the available slots. Make sure to book your appointment in advance to avoid long waiting times."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="35dp"
+                android:paddingRight="17dp"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:text="3. Upload Required Documents: Some services may require you to upload documents before your appointment. Be sure to have these ready."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="35dp"
+                android:paddingRight="17dp"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:text="4. Confirm Your Appointment: Once you’ve entered your details, we’ll show you a summary of your appointment. Review it and confirm your booking. You will receive a notification with your appointment details."/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
@@ -64,19 +95,50 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/justifiedreminderText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif-condensed"
                 android:justificationMode="inter_word"
-                android:paddingLeft="39dp"
+                android:paddingLeft="35dp"
                 android:paddingRight="17dp"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:text="- Arrive at least 10 minutes before your scheduled appointment time."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="35dp"
+                android:paddingRight="17dp"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:text="- Bring all required documents listed below along with a valid ID for verification."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="35dp"
+                android:paddingRight="17dp"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:text="- If you are unable to attend, please reschedule or cancel your appointment ahead of time."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
+                android:paddingLeft="35dp"
+                android:paddingRight="17dp"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:text="- Late arrivals may need to rebook based on staff availability."/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-condensed"
                 android:justificationMode="inter_word"
                 android:lineSpacingExtra="4dp"

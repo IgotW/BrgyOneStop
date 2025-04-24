@@ -43,17 +43,18 @@
                 android:lineSpacingExtra="4dp"
                 android:text="The available dates and time slots displayed below are based on the official working hours of the barangay and the remaining available slots for each service. Once a time slot is fully booked, it will no longer appear in the list." />
             <LinearLayout
-                android:layout_width="385dp"
-                android:layout_height="500dp"
+                android:layout_width="380dp"
+                android:layout_height="715dp"
                 android:orientation="vertical"
                 android:background="@color/second_background"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:padding="15dp">
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="35dp"
                     android:text="Name:"
-                    android:padding="10dp"
+                    android:textSize="17sp"
                     android:fontFamily="sans-serif-condensed"/>
                 <EditText
                     android:layout_width="330dp"
@@ -66,8 +67,9 @@
                     android:layout_width="150dp"
                     android:layout_height="35dp"
                     android:text="Contact no.: "
-                    android:padding="10dp"
-                    android:fontFamily="sans-serif-condensed"/>
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-condensed" />
                 <EditText
                     android:layout_width="330dp"
                     android:layout_height="40dp"
@@ -79,8 +81,9 @@
                     android:layout_width="150dp"
                     android:layout_height="35dp"
                     android:text="Service Selection: "
-                    android:padding="10dp"
-                    android:fontFamily="sans-serif-condensed"/>
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"/>
                 <Spinner
                     android:layout_width="330dp"
                     android:layout_height="40dp"
@@ -90,8 +93,9 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="35dp"
-                    android:text="What for? "
-                    android:padding="10dp"
+                    android:text="Choose Date "
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
                     android:fontFamily="sans-serif-condensed"/>
                 <EditText
                     android:layout_width="330dp"
@@ -103,8 +107,9 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="35dp"
-                    android:text="Choose Date: "
-                    android:padding="10dp"
+                    android:text="Choose Time: "
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
                     android:fontFamily="sans-serif-condensed"/>
                 <EditText
                     android:id="@+id/dateEditText"
@@ -115,10 +120,39 @@
                     android:layout_gravity="center"
                     android:background="@color/white"
                     android:padding="7dp"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:text="What for? "
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-condensed"/>
+                <EditText
+                    android:layout_width="330dp"
+                    android:layout_height="40dp"
+                    android:hint="Enter phone name"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:padding="7dp"/>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:text="Attachments"
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="sans-serif-condensed"/>
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="CHOOSE FILE(S)"
+                    android:textSize="12sp"
+                    android:backgroundTint="@color/primary_button"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"/>
             </LinearLayout>
             <Button
                 android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:backgroundTint="@color/primary_button"
                 android:text="SCHEDULE APPOINTMENT"
                 android:layout_gravity="center"
