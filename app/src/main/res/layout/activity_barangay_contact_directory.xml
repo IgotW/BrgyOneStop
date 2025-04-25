@@ -51,14 +51,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <LinearLayout
+
+            <ListView
                 android:id="@+id/officeList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="606dp"
+                android:layout_marginTop="17dp"
                 android:orientation="vertical"
-                android:padding="8dp"
-                android:layout_marginTop="17dp">
-            </LinearLayout>
+                android:padding="8dp">
+
+            </ListView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
