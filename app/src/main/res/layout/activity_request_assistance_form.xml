@@ -1,26 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@drawable/leftarrow"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="15dp"/>
-        <TextView
-            android:layout_width="185dp"
-            android:layout_height="30dp"
-            android:text="Request Assistance"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="23sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="95dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/leftarrow"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:layout_width="185dp"
+                android:layout_height="30dp"
+                android:text="Request Assistance"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="23sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="95dp"/>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="350dp"
+                    android:layout_height="35dp"
+                    android:text="Need Help? Submit a Request Below"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="23sp"
+                    android:layout_marginLeft="15dp"/>
+                <LinearLayout
+                    android:layout_width="380dp"
+                    android:layout_height="730dp"
+                    android:orientation="vertical"
+                    android:background="@color/second_background"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp">
+                    <TextView
+                        android:layout_width="115dp"
+                        android:layout_height="45dp"
+                        android:text="Request Form"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Request Type"
+                        android:textSize="17sp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <EditText
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:hint="Incident here"
+                        android:background="@color/white"
+                        android:layout_gravity="center"
+                        android:padding="7dp"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Details: "
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <EditText
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Please enter incident details here ..."
+                        android:inputType="textMultiLine"
+                        android:minLines="4"
+                        android:gravity="top|start"
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:textSize="17sp"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Attachments"
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="@string/choose_file"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/primary_button"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Location "
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed" />
+                    <EditText
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:hint="Enter phone name"
+                        android:background="@color/white"
+                        android:layout_gravity="center"
+                        android:padding="7dp"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Preferred Date "
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"/>
+                    <Spinner
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:entries="@array/scheduleappointment_items"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Preferred Time"
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <EditText
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:hint="Enter phone name"
+                        android:background="@color/white"
+                        android:layout_gravity="center"
+                        android:padding="7dp"/>
+                </LinearLayout>
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/primary_button"
+                    android:text="REQUEST ASSISTANCE"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:weightSum="5"
+        android:layout_alignParentBottom="true"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@drawable/home"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@drawable/inbox"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@drawable/history"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@drawable/profile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-condensed"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/emergencyButton"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/call"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:elevation="8dp"
+        android:padding="3dp"/>
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="8dp"
+        android:text="Call"
+        android:layout_marginBottom="7dp"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-condensed"/>
+</RelativeLayout>
