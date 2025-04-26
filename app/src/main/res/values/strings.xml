@@ -1,4 +1,21 @@
 <resources>
+    <string name="track_request">Track Request</string>
+    <string name="request_code_value">SE039245GBT</string>
+    <string name="account_name_label_value">Account Name:   jhvgctfcgvhb</string>
+    <string name="service_type_label_value">Service Type:   jhvgctfcgvhb</string>
+    <string name="location_label_value">Location:   jbbhubjnkk </string>
+    <string name="preferred_date_label_value">Preferred Date:   uhvjhbkjnkjn</string>
+    <string name="preferred_time_label_value">Preferred Time:   uvhvgvhjbkjn</string>
+    <string name="request_details_value">Request Details:   \n      wvkc jsd njein qfnowieqlm wdqoweiw efnri tjnnvkevsdcmdncwe eriugerin dfgdfdfg sfgdfgdfg guightvdnd aldqojqoijdwefjenfuvhvgvhjbkjn</string>
+    <string name="uploaded_image_video">Uploaded Image/Video</string>
+    <string name="status_label">Status: </string>
+    <string name="status_completed">Completed</string>
+    <string name="home">Home</string>
+    <string name="inbox">Inbox</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="call">Call</string>
+    <string name="choose_file">CHOOSE FILE(S)</string>
     <string name="app_name">BrgyOneStop</string>
 
     <string-array name="filecomplaint_items">
