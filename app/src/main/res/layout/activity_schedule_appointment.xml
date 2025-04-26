@@ -160,6 +160,9 @@
                     android:fontFamily="sans-serif-condensed"
                     android:letterSpacing="0.1"
                     android:text="SCHEDULE APPOINTMENT" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
