@@ -3,5 +3,64 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/leftarrow"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="30dp"
+            android:text="Barangay Directory"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="90dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="#FFFFFF"
+        android:layout_gravity="center">
 
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:hint="Search Service"
+            android:background="@android:color/transparent"
+            android:paddingStart="8dp"
+            android:textColor="#000"
+            android:textColorHint="#888"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_search"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/officeList"
+                android:layout_width="match_parent"
+                android:layout_height="606dp"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
