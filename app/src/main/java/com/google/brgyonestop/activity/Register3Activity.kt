@@ -29,12 +29,12 @@ class Register3Activity : Activity() {
         var lastname = ""
         var suffix = ""
 
-        val purok = findViewById<EditText>(R.id.edittext_reg_purok)
-        val street = findViewById<EditText>(R.id.edittext_reg_street)
-        val barangay = findViewById<EditText>(R.id.edittext_reg_barangay)
-        val municipality = findViewById<EditText>(R.id.edittext_reg_municipality)
-        val province = findViewById<EditText>(R.id.edittext_reg_province)
-        val zipcode = findViewById<EditText>(R.id.edittext_reg_zipcode)
+        val edittext_reg_purok = findViewById<EditText>(R.id.edittext_reg_purok)
+        val edittext_reg_street = findViewById<EditText>(R.id.edittext_reg_street)
+        val edittext_reg_barangay = findViewById<EditText>(R.id.edittext_reg_barangay)
+        val edittext_reg_municipality = findViewById<EditText>(R.id.edittext_reg_municipality)
+        val edittext_reg_province = findViewById<EditText>(R.id.edittext_reg_province)
+        val edittext_reg_zipcode = findViewById<EditText>(R.id.edittext_reg_zipcode)
         val button_register3_next = findViewById<Button>(R.id.button_register3_next)
         val button_register3_cancel = findViewById<Button>(R.id.button_register3_cancel)
 
@@ -69,28 +69,48 @@ class Register3Activity : Activity() {
 
         button_register3_next.setOnClickListener {
 
+            val purok = edittext_reg_purok.text.toString()
+            val street = edittext_reg_street.text.toString()
+            val barangay = edittext_reg_barangay.text.toString()
+            val municipality = edittext_reg_municipality.text.toString()
+            val province = edittext_reg_province.text.toString()
+            val zipcode = edittext_reg_zipcode.text.toString()
+
+            var hasError = false
+
+            if (purok.isEmpty()){
+                edittext_reg_purok.error = "Purok is required"
+                hasError = true
+            }
+            if (street.isEmpty()){
+                edittext_reg_street.error = "Street is required"
+                hasError = true
+            }
+            if (barangay.isEmpty()){
+                edittext_reg_barangay.error = "Barangay is required"
+                hasError = true
+            }
+            if (municipality.isEmpty()){
+                edittext_reg_municipality.error = "Municipality is required"
+                hasError = true
+            }
+            if (province.isEmpty()){
+                edittext_reg_province.error = "Provice/City is required"
+                hasError = true
+            }
+            if (zipcode.isEmpty()){
+                edittext_reg_zipcode.error = "Zip Code is required"
+                hasError = true
+            }
+
+            if (hasError) return@setOnClickListener
+
             try {
-//                val body = mapOf(
-//                    "username" to username,
-//                    "email" to email,
-//                    "phoneNumber" to phone,
-//                    "password" to password,
-//                    "firstName" to firstname,
-//                    "middleName" to middlename,
-//                    "lastName" to lastname,
-//                    "suffix" to suffix,
-//                    "purok" to purok.text.toString(),
-//                    "street" to street.text.toString(),
-//                    "barangay" to barangay.text.toString(),
-//                    "municipality" to municipality.text.toString(),
-//                    "province" to province.text.toString(),
-//                    "zipcode" to zipcode
-//                )
                 val request = RegisterRequest(
                     username, email, phone, password, firstname,
-                    middlename, lastname, suffix, purok.text.toString(),
-                    street.text.toString(), barangay.text.toString(), municipality.text.toString(),
-                    province.text.toString(), zipcode.text.toString()
+                    middlename, lastname, suffix, purok,
+                    street, barangay, municipality,
+                    province, zipcode
                 )
 
                 // Make API call using RetrofitClient

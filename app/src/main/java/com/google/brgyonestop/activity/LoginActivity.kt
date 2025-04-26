@@ -49,12 +49,27 @@ class LoginActivity : Activity() {
             RetrofitClient.instance.loginUser(body).enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful && response.body() != null) {
+                        val loginResponse = response.body()!!
+                        val role = loginResponse.role
+
                         Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()
                         Log.d("API_LOGIN", response.body().toString())
 
-                        startActivity(
-                            Intent(this@LoginActivity, DashboardActivity::class.java)
-                        )
+                        if(role == "admin"){
+                            startActivity(
+                                Intent(this@LoginActivity, AdminDashboardActivity::class.java)
+                            )
+                        } else{
+                            startActivity(
+                                Intent(this@LoginActivity, DashboardActivity::class.java).apply {
+                                    putExtra("firstname", loginResponse.user.firstName)
+                                    putExtra("middlename", loginResponse.user.middleName)
+                                    putExtra("lastname", loginResponse.user.lastName)
+                                    putExtra("suffix", loginResponse.user.suffix)
+                                }
+                            )
+
+                        }
                         // You can navigate to the next activity
                         // startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                     } else {
