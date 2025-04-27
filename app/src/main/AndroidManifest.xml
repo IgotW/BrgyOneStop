@@ -15,6 +15,12 @@
         android:theme="@style/Theme.BrgyOneStop"
         tools:targetApi="31">
         <activity
+            android:name=".activity.AdminAllFiledComplaintsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminResidentProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.AdminResidentsListActivity"
             android:exported="false" />
         <activity

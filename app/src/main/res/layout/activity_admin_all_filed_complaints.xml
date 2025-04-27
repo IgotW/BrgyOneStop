@@ -5,16 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.AdminResidentsListActivity"
+    tools:context=".activity.AdminAllFiledComplaintsActivity"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
         <ImageView
-            android:id="@+id/imageview_residentlist_back"
+            android:id="@+id/imageview_allcomplaints_back"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/arrow_back"
@@ -24,27 +23,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Resident List"
+            android:text="Filed Complaints"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="22sp"
             android:layout_gravity="center"
-            android:layout_marginLeft="68dp"/>
+            android:layout_marginLeft="60dp"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textview_residentlist_purokname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Purok Name"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
-
     <ListView
-        android:id="@+id/listview_residentlist"
+        android:id="@+id/listview_allcomplaints"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp"/>

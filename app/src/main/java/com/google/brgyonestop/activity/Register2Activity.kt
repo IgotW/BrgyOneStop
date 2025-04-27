@@ -16,6 +16,8 @@ class Register2Activity : Activity() {
         val edittext_reg_middlename = findViewById<EditText>(R.id.edittext_reg_middlename)
         val edittext_reg_lastname = findViewById<EditText>(R.id.edittext_reg_lastname)
         val edittext_reg_suffix = findViewById<EditText>(R.id.edittext_reg_suffix)
+        val edittext_reg_birthdate = findViewById<EditText>(R.id.edittext_reg_birthdate)
+        val edittext_reg_gender = findViewById<EditText>(R.id.edittext_reg_gender)
         val button_register2_next = findViewById<Button>(R.id.button_register2_next)
         val button_register2_cancel = findViewById<Button>(R.id.button_register2_cancel)
         var username = ""
