@@ -25,9 +25,9 @@ class AnnouncementAdapter(
 
     override fun onBindViewHolder(holder: AnnouncementViewHolder, position: Int) {
         val announcement = announcements[position]
-        holder.tvTitle.text = announcement.title
-        holder.tvDate.text = announcement.date
-        holder.tvContent.text = announcement.content
+//        holder.tvTitle.text = announcement.title
+//        holder.tvDate.text = announcement.date
+//        holder.tvContent.text = announcement.content
     }
 
     override fun getItemCount(): Int = announcements.size

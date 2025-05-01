@@ -107,11 +107,13 @@
                 android:id="@+id/edittext_reg_birthdate"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:hint="MM/DD/YYYY"
+                android:hint="Select Birth Date"
                 android:textSize="15dp"
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_edittext"
-                android:paddingLeft="15dp"/>
+                android:focusable="false"
+                android:clickable="true"
+                android:paddingLeft="15dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,15 +122,13 @@
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"
                 android:layout_marginBottom="5dp"/>
-            <EditText
-                android:id="@+id/edittext_reg_gender"
+            <Spinner
+                android:id="@+id/spinner_reg_gender"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:hint="Enter Gender"
-                android:textSize="15dp"
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_edittext"
-                android:paddingLeft="15dp"/>
+                android:paddingLeft="15dp" />
             <Button
                 android:id="@+id/button_register2_next"
                 android:layout_width="300dp"

@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import com.google.brgyonestop.R
+import com.google.brgyonestop.response.AnnouncementResponse
 import com.google.brgyonestop.response.ProfileResponse
 import com.google.brgyonestop.utils.RetrofitClient
 import retrofit2.Call
@@ -19,33 +20,99 @@ class DashboardActivity : Activity() {
         setContentView(R.layout.activity_dashboard)
 
         val dashboard_name = findViewById<TextView>(R.id.textview_dashboard_name)
-        var firstname = ""
-        var middlename = ""
-        var lastname = ""
-        var suffix = ""
+        val textview_announcement_title = findViewById<TextView>(R.id.textview_announcement_title)
+        val textview_announcement_description = findViewById<TextView>(R.id.textview_announcement_description)
 
-        intent?.let {
-            it.getStringExtra("firstname")?.let { fname ->
-                firstname = fname
-            }
-            it.getStringExtra("middlename")?.let { mname ->
-                middlename = mname
-            }
-            it.getStringExtra("lastname")?.let { lname ->
-                lastname = lname
-            }
-            it.getStringExtra("suffix")?.let { extrasuffix ->
-                suffix = extrasuffix
-            }
+        val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val token = sharedPref.getString("token", null)
 
+        if (token != null) {
+            RetrofitClient.instance.getUserProfile("Bearer $token")
+                .enqueue(object : Callback<ProfileResponse> {
+                    override fun onResponse(call: Call<ProfileResponse>, response: Response<ProfileResponse>) {
+                        if (response.isSuccessful && response.body() != null) {
+                            val user = response.body()!!.user
+                            val fullName = "${user.firstName} ${user.middleName} ${user.lastName} ${user.suffix}"
+                                .trim()
+                                .replace(Regex(" +"), " ")
+
+                            dashboard_name.text = fullName
+
+                            //to get the latest announcement
+
+                            val call = RetrofitClient.instance.getAnnouncements()
+
+                            call.enqueue(object : retrofit2.Callback<AnnouncementResponse> {
+                                override fun onResponse(call: Call<AnnouncementResponse>, response: Response<AnnouncementResponse>) {
+                                    if (response.isSuccessful && response.body() != null) {
+                                        val announcementsList = response.body()!!.announcements
+
+                                        if (announcementsList.isNotEmpty()) {
+                                            val latestAnnouncement = announcementsList[0] // first item is the latest
+
+                                            // Example: Display it in TextViews
+                                            textview_announcement_title.text = latestAnnouncement.title
+                                            textview_announcement_description.text = latestAnnouncement.description
+
+                                            Log.d("LATEST_ANNOUNCEMENT", "Title: ${latestAnnouncement.title}, Description: ${latestAnnouncement.description}")
+                                        } else {
+                                            Log.d("LATEST_ANNOUNCEMENT", "No announcements available")
+                                        }
+                                    } else {
+                                        Log.e("ANNOUNCEMENT_ERROR", "Failed to load announcements")
+                                    }
+                                }
+                                override fun onFailure(call: Call<AnnouncementResponse>, t: Throwable) {
+                                    Log.e("ANNOUNCEMENT_EXCEPTION", t.message.toString())
+                                }
+                            })
+
+                        } else {
+                            Toast.makeText(this@DashboardActivity, "Failed to load profile", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<ProfileResponse>, t: Throwable) {
+                        Toast.makeText(this@DashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                    }
+                })
+        } else {
+            Toast.makeText(this, "No token found. Please login again.", Toast.LENGTH_SHORT).show()
         }
 
-        //commit and push the latest API to work the middlename part, test the dashboard must have the fullname displayed
-        //fix the name and notification part it must be fixed not moving the notification button.
 
-        val fullName = "$firstname $middlename $lastname $suffix".trim().replace(Regex(" +"), " ")
 
-        dashboard_name.text = fullName
+
+
+
+
+//        var firstname = ""
+//        var middlename = ""
+//        var lastname = ""
+//        var suffix = ""
+//
+//        intent?.let {
+//            it.getStringExtra("firstname")?.let { fname ->
+//                firstname = fname
+//            }
+//            it.getStringExtra("middlename")?.let { mname ->
+//                middlename = mname
+//            }
+//            it.getStringExtra("lastname")?.let { lname ->
+//                lastname = lname
+//            }
+//            it.getStringExtra("suffix")?.let { extrasuffix ->
+//                suffix = extrasuffix
+//            }
+//
+//        }
+//
+//        //commit and push the latest API to work the middlename part, test the dashboard must have the fullname displayed
+//        //fix the name and notification part it must be fixed not moving the notification button.
+//
+//        val fullName = "$firstname $middlename $lastname $suffix".trim().replace(Regex(" +"), " ")
+//
+//        dashboard_name.text = fullName
 
     }
 }
