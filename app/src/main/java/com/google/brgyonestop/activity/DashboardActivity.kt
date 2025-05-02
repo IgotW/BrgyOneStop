@@ -22,6 +22,7 @@ class DashboardActivity : Activity() {
         val dashboard_name = findViewById<TextView>(R.id.textview_dashboard_name)
         val textview_announcement_title = findViewById<TextView>(R.id.textview_announcement_title)
         val textview_announcement_description = findViewById<TextView>(R.id.textview_announcement_description)
+        val textview_announcement_date = findViewById<TextView>(R.id.textview_announcement_date)
 
         val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = sharedPref.getString("token", null)
@@ -35,14 +36,13 @@ class DashboardActivity : Activity() {
                             val fullName = "${user.firstName} ${user.middleName} ${user.lastName} ${user.suffix}"
                                 .trim()
                                 .replace(Regex(" +"), " ")
-
-                            dashboard_name.text = fullName
+                            dashboard_name.setText(fullName)
 
                             //to get the latest announcement
 
-                            val call = RetrofitClient.instance.getAnnouncements()
+                            val call = RetrofitClient.instance.getAnnouncements(token)
 
-                            call.enqueue(object : retrofit2.Callback<AnnouncementResponse> {
+                            call.enqueue(object : Callback<AnnouncementResponse> {
                                 override fun onResponse(call: Call<AnnouncementResponse>, response: Response<AnnouncementResponse>) {
                                     if (response.isSuccessful && response.body() != null) {
                                         val announcementsList = response.body()!!.announcements
@@ -51,15 +51,16 @@ class DashboardActivity : Activity() {
                                             val latestAnnouncement = announcementsList[0] // first item is the latest
 
                                             // Example: Display it in TextViews
-                                            textview_announcement_title.text = latestAnnouncement.title
-                                            textview_announcement_description.text = latestAnnouncement.description
+                                            textview_announcement_title.setText(latestAnnouncement.title)
+                                            textview_announcement_description.setText(latestAnnouncement.description)
+                                            textview_announcement_date.setText(latestAnnouncement.createdAt)
 
                                             Log.d("LATEST_ANNOUNCEMENT", "Title: ${latestAnnouncement.title}, Description: ${latestAnnouncement.description}")
                                         } else {
                                             Log.d("LATEST_ANNOUNCEMENT", "No announcements available")
                                         }
                                     } else {
-                                        Log.e("ANNOUNCEMENT_ERROR", "Failed to load announcements")
+                                        Log.e("ANNOUNCEMENT_ERROR", "Failed to load announcements: ${response.code()}")
                                     }
                                 }
                                 override fun onFailure(call: Call<AnnouncementResponse>, t: Throwable) {

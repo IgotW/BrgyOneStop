@@ -50,5 +50,5 @@ interface ApiService {
     ): Call<ProfileResponse>
 
     @GET("/api/announcement/announcements")
-    fun getAnnouncements(): Call<AnnouncementResponse>
+    fun getAnnouncements(@Header("Authorization") token: String): Call<AnnouncementResponse>
 }
