@@ -14,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 import com.google.brgyonestop.R
 import com.google.brgyonestop.models.Announcement
+import com.google.brgyonestop.request.AnnouncementRequest
+import com.google.brgyonestop.response.AnnouncementResponse
 import com.google.brgyonestop.utils.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -38,27 +40,36 @@ class AdminCreateAnnouncementActivity : Activity() {
             val token = sharedPref.getString("token", null)
 
             if (token != null) {
-                val announcement = Announcement(
-                    title, description
-                )
                 val bearerToken = "Bearer $token"
+                val request = AnnouncementRequest(
+                    title,
+                    description
+                )
 
-                RetrofitClient.instance.createAnnouncement(bearerToken, announcement)
-                    .enqueue(object : Callback<Void> {
-                        override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                            if (response.isSuccessful) {
-                                Toast.makeText(this@AdminCreateAnnouncementActivity, "Announcement posted", Toast.LENGTH_SHORT).show()
+                RetrofitClient.instance.createAnnouncement(bearerToken, request)
+                    .enqueue(object : Callback<AnnouncementResponse> {
+                        override fun onResponse(
+                            call: Call<AnnouncementResponse>,
+                            response: Response<AnnouncementResponse>
+                        ) {
+                            if (response.isSuccessful && response.body()?.success == true) {
+                                Toast.makeText(this@AdminCreateAnnouncementActivity, "Announcement posted!", Toast.LENGTH_SHORT).show()
+                                startActivity(
+                                    Intent(this@AdminCreateAnnouncementActivity, AdminDashboardActivity::class.java)
+                                )
+                                finish()
                             } else {
-                                Toast.makeText(this@AdminCreateAnnouncementActivity, "Failed to post", Toast.LENGTH_SHORT).show()
+                                val errorMessage = response.body()?.message ?: "Failed to post"
+                                Toast.makeText(this@AdminCreateAnnouncementActivity, errorMessage, Toast.LENGTH_SHORT).show()
                             }
                         }
 
-                        override fun onFailure(call: Call<Void>, t: Throwable) {
+                        override fun onFailure(call: Call<AnnouncementResponse>, t: Throwable) {
                             Toast.makeText(this@AdminCreateAnnouncementActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
                         }
                     })
             } else {
-                Toast.makeText(this, "Token not found, please login again.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Token not found. Please log in again.", Toast.LENGTH_SHORT).show()
             }
         }
 

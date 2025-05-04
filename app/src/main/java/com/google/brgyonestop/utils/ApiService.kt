@@ -1,6 +1,7 @@
 package com.google.brgyonestop.utils
 
 import com.google.brgyonestop.models.Announcement
+import com.google.brgyonestop.request.AnnouncementRequest
 import com.google.brgyonestop.request.EmailRequest
 import com.google.brgyonestop.request.OtpRequest
 import com.google.brgyonestop.request.RegisterRequest
@@ -30,11 +31,11 @@ interface ApiService {
     @POST("/api/users/auth/register")
     fun registerUser(@Body request: RegisterRequest): Call<RegisterResponse>
 
-    @POST("/api/admin/create-announcement")
+    @POST("api/admin/create-announcement")
     fun createAnnouncement(
         @Header("Authorization") token: String,
-        @Body announcement: Announcement
-    ): Call<Void>
+        @Body request: AnnouncementRequest
+    ): Call<AnnouncementResponse>
 
     @POST("/api/users/auth/forgot-password")
     fun sendOtp(@Body request: EmailRequest): Call<ApiResponse>
