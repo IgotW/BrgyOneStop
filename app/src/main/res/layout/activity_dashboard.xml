@@ -53,6 +53,7 @@
                     android:layout_marginTop="25dp"
                     android:gravity="center">
                     <LinearLayout
+                        android:id="@+id/dashboard_file_complaint"
                         android:layout_width="60dp"
                         android:layout_height="85dp"
                         android:orientation="vertical"

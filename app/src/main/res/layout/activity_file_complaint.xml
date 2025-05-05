@@ -11,6 +11,7 @@
             android:layout_height="70dp"
             android:orientation="horizontal">
             <ImageView
+                android:id="@+id/imageview_filecomplaint_back"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/arrow_back"
@@ -48,7 +49,7 @@
                     android:layout_gravity="center"/>
                 <LinearLayout
                     android:layout_width="370dp"
-                    android:layout_height="530dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
@@ -75,6 +76,7 @@
                         android:padding="10dp"
                         android:layout_marginLeft="7dp"/>
                     <Spinner
+                        android:id="@+id/spinner_filecomplaint_catergory"
                         android:layout_width="330dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
@@ -115,6 +117,7 @@
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="20dp"/>
                     <Button
+                        android:id="@+id/button_filecomplaint_choosefiles"
                         android:layout_width="150dp"
                         android:layout_height="50dp"
                         android:text="CHOOSE FILE(S)"
@@ -122,6 +125,14 @@
                         android:backgroundTint="@color/primary_button"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"/>
+                    <TextView
+                        android:id="@+id/textview_filecomplaint_selected_file"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No file selected"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="25dp"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
@@ -134,26 +145,32 @@
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="15dp"/>
                     <CheckBox
+                        android:id="@+id/checkbox_filecomplaint_anonymously"
                         android:layout_width="330dp"
                         android:layout_height="50dp"
                         android:layout_marginLeft="27dp"
-                        android:text="File this complaint anonymously"/>
+                        android:text="File this complaint anonymously"
+                        android:layout_marginBottom="20dp"/>
                 </LinearLayout>
+
                 <Button
+                    android:id="@+id/button_filecomplaint_submit"
                     android:layout_width="270dp"
                     android:layout_height="50dp"
-                    android:text="SUBMIT COMPLAINT"
-                    android:layout_marginTop="25dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
                     android:backgroundTint="@color/primary_button"
-                    android:textColor="@color/white"/>
+                    android:text="SUBMIT COMPLAINT"
+                    android:textColor="@color/white" />
+
                 <Button
+                    android:id="@+id/button_filecomplaint_cancel"
                     android:layout_width="270dp"
                     android:layout_height="50dp"
                     android:text="CANCEL"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_gravity="center"
-                    android:backgroundTint="@color/primary_button"
+                    android:backgroundTint="@color/secondary"
                     android:textColor="@color/white"
                     android:layout_marginBottom="30dp"/>
                 <View

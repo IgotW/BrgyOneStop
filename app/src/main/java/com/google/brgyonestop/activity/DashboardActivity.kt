@@ -2,8 +2,10 @@ package com.google.brgyonestop.activity
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.google.brgyonestop.R
@@ -23,6 +25,7 @@ class DashboardActivity : Activity() {
         val textview_announcement_title = findViewById<TextView>(R.id.textview_announcement_title)
         val textview_announcement_description = findViewById<TextView>(R.id.textview_announcement_description)
         val textview_announcement_date = findViewById<TextView>(R.id.textview_announcement_date)
+        val dashboard_file_complaint = findViewById<LinearLayout>(R.id.dashboard_file_complaint)
 
         val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = sharedPref.getString("token", null)
@@ -77,6 +80,11 @@ class DashboardActivity : Activity() {
                         Toast.makeText(this@DashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
                     }
                 })
+            dashboard_file_complaint.setOnClickListener {
+                startActivity(
+                    Intent(this, FileComplaintActivity::class.java)
+                )
+            }
         } else {
             Toast.makeText(this, "No token found. Please login again.", Toast.LENGTH_SHORT).show()
         }
