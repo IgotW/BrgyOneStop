@@ -3,7 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.CALL_PHONE" />
+=======
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+>>>>>>> ec6a009ffdfaf58d274f2cec45afdf2352b3161f
 
     <application
         android:allowBackup="true"
@@ -16,7 +21,29 @@
         android:theme="@style/Theme.BrgyOneStop"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".HistoryActivity"
+=======
+            android:name=".activity.FileComplaintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminAllFiledComplaintsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminResidentProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminResidentsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminPurokListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminCreateAnnouncementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminDashboardActivity"
+>>>>>>> ec6a009ffdfaf58d274f2cec45afdf2352b3161f
             android:exported="false" />
         <activity
             android:name=".ScheduleAppointmentActivity"

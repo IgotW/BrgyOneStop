@@ -28,6 +28,8 @@ class Register3Activity : Activity() {
         var middlename = ""
         var lastname = ""
         var suffix = ""
+        var birthdate = ""
+        var gender = ""
 
         val edittext_reg_purok = findViewById<EditText>(R.id.edittext_reg_purok)
         val edittext_reg_street = findViewById<EditText>(R.id.edittext_reg_street)
@@ -63,6 +65,12 @@ class Register3Activity : Activity() {
             }
             it.getStringExtra("suffix")?.let { suf ->
                 suffix = suf
+            }
+            it.getStringExtra("birthdate")?.let { bday ->
+                birthdate = bday
+            }
+            it.getStringExtra("gender")?.let { gen ->
+                gender = gen
             }
         }
 
@@ -108,7 +116,7 @@ class Register3Activity : Activity() {
             try {
                 val request = RegisterRequest(
                     username, email, phone, password, firstname,
-                    middlename, lastname, suffix, purok,
+                    middlename, lastname, suffix, birthdate, gender, purok,
                     street, barangay, municipality,
                     province, zipcode
                 )
