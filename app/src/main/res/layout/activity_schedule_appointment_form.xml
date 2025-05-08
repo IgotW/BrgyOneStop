@@ -103,7 +103,7 @@
                     <EditText
                         android:layout_width="330dp"
                         android:layout_height="40dp"
-                        android:hint="Enter phone name"
+                        android:hint="Choose Prefered Date"
                         android:background="@color/white"
                         android:layout_gravity="center"
                         android:padding="7dp"/>
@@ -118,7 +118,7 @@
                         android:id="@+id/dateEditText"
                         android:layout_width="330dp"
                         android:layout_height="40dp"
-                        android:hint="Choose Prefered Date"
+                        android:hint="Choose Prefered Time"
                         android:focusable="false"
                         android:layout_gravity="center"
                         android:background="@color/white"

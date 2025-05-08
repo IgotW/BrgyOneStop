@@ -1,9 +1,10 @@
-package com.google.brgyonestop
+package com.google.brgyonestop.activity
 
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.widget.EditText
+import com.google.brgyonestop.R
 import java.util.Calendar
 
 class ScheduleAppointmentFormActivity : Activity() {
