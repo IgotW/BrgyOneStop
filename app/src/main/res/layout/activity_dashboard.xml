@@ -134,25 +134,7 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="7dp"
                     android:layout_gravity="center">
-                    <LinearLayout
-                        android:id="@+id/assistance"
-                        android:layout_width="60dp"
-                        android:layout_height="85dp"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="41dp">
-                        <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/filecomplaint"/>
-                        <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="30dp"
-                            android:text="Request Assistance"
-                            android:textSize="13sp"
-                            android:gravity="center"
-                            android:fontFamily="sans-serif-condensed"
-                            android:layout_marginTop="3dp"/>
-                    </LinearLayout>
+
                     <LinearLayout
                         android:id="@+id/trackrequest"
                         android:layout_width="60dp"

@@ -8,6 +8,9 @@ import com.google.brgyonestop.request.RegisterRequest
 import com.google.brgyonestop.request.ResetPasswordRequest
 import com.google.brgyonestop.response.AnnouncementResponse
 import com.google.brgyonestop.response.ApiResponse
+import com.google.brgyonestop.response.AppointmentsCountResponse
+import com.google.brgyonestop.response.ComplaintResponse
+import com.google.brgyonestop.response.ComplaintsCountResponse
 import com.google.brgyonestop.response.LoginResponse
 import com.google.brgyonestop.response.OtpResponse
 import com.google.brgyonestop.response.ProfileResponse
@@ -23,7 +26,9 @@ import retrofit2.http.Header
 import retrofit2.http.Headers
 import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Part
+import retrofit2.http.Path
 
 interface ApiService {
     @Headers("Content-Type: application/json")
@@ -62,6 +67,10 @@ interface ApiService {
         @Part file: MultipartBody.Part? = null
     ): Call<ResponseBody>
 
+    //post /schedule-appointment
+
+
+
     @GET("api/users/auth/profile")
     fun getUserProfile(@Header("Authorization") token: String
     ): Call<ProfileResponse>
@@ -69,8 +78,42 @@ interface ApiService {
     @GET("/api/announcement/announcements")
     fun getAnnouncements(@Header("Authorization") token: String): Call<AnnouncementResponse>
 
-    @GET("count-users")
+
+    //get allusers
+
+    @GET("/api/admin/count-users")
     fun getUserCount(
         @Header("Authorization") token: String
     ): Call<UserCountResponse>
+
+    //get /complaints
+    @GET("/api/admin/complaints")
+    fun getComplaints(
+        @Header("Authorization") token: String
+    ): Call<ComplaintResponse>
+
+    //get /count-complaints
+    @GET("/api/admin/count-complaints")
+    fun getComplaintsCount(
+        @Header("Authorization") token: String
+    ): Call<ComplaintsCountResponse>
+
+    //get /appointments
+
+    //get /count-appointments
+    @GET("/api/admin/count-appointments")
+    fun getAppointmentsCount(
+        @Header("Authorization") token: String
+    ): Call<AppointmentsCountResponse>
+
+
+
+    //put /complaint-status/:id
+    @PUT("/api/admin/complaint-status/{id}")
+    fun updateComplaintStatus(
+        @Path("id") id: String,
+        @Body body: Map<String, String>,
+        @Header("Authorization") token: String
+    ): Call<Void>
+    //put /appointment-status/:id
 }
