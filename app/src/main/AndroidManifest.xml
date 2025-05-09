@@ -3,12 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.CALL_PHONE" />
-=======
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
->>>>>>> ec6a009ffdfaf58d274f2cec45afdf2352b3161f
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,9 +17,12 @@
         android:theme="@style/Theme.BrgyOneStop"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".HistoryActivity"
-=======
+            android:name=".activity.AdminComplaintDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ScheduleAppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.FileComplaintActivity"
             android:exported="false" />
         <activity
@@ -43,7 +42,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.AdminDashboardActivity"
->>>>>>> ec6a009ffdfaf58d274f2cec45afdf2352b3161f
             android:exported="false" />
         <activity
             android:name=".ScheduleAppointmentActivity"
@@ -55,7 +53,7 @@
             android:name=".activity.AdminDashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".ScheduleAppointmentFormActivity"
+            android:name=".activity.ScheduleAppointmentFormActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ForgotPassword3Activity"

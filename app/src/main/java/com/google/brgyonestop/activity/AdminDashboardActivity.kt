@@ -8,9 +8,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.brgyonestop.R
+import com.google.brgyonestop.response.AppointmentsCountResponse
+import com.google.brgyonestop.response.ComplaintsCountResponse
 import com.google.brgyonestop.response.UserCountResponse
 import com.google.brgyonestop.utils.RetrofitClient
 import retrofit2.Call
@@ -18,13 +21,23 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class AdminDashboardActivity : Activity() {
+    private lateinit var textview_admindashboard_total_residents: TextView
+    private lateinit var textview_admindashboard_total_filedcomplaints: TextView
+    private lateinit var textview_admindashboard_total_incidentreports: TextView
+    private lateinit var textview_admindashboard_total_appointments: TextView
+    private lateinit var textview_admindashboard_total_assistancerequest: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_dashboard)
 
         val imageview_admindashboard_createannouncement = findViewById<ImageView>(R.id.imageview_admindashboard_createannouncement)
         val textview_admindashboard_createannouncement = findViewById<TextView>(R.id.textview_admindashboard_createannouncement)
-        val textview_dashboard_total_residents = findViewById<TextView>(R.id.textview_dashboard_total_residents)
+        textview_admindashboard_total_residents = findViewById(R.id.textview_admindashboard_total_residents)
+        textview_admindashboard_total_filedcomplaints = findViewById(R.id.textview_admindashboard_total_filedcomplaints)
+        textview_admindashboard_total_incidentreports = findViewById(R.id.textview_admindashboard_total_incidentreports)
+        textview_admindashboard_total_appointments = findViewById(R.id.textview_admindashboard_total_appointments)
+        textview_admindashboard_total_assistancerequest = findViewById(R.id.textview_admindashboard_total_assistancerequest)
+        val card_filedcomplaints = findViewById<CardView>(R.id.card_filedcomplaints)
 
         val sharedPref = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         val token = sharedPref.getString("token", null)
@@ -32,24 +45,28 @@ class AdminDashboardActivity : Activity() {
         if (token != null) {
             val bearerToken = "Bearer $token"
 
-            RetrofitClient.instance.getUserCount(bearerToken)
-                .enqueue(object : Callback<UserCountResponse> {
-                    override fun onResponse(
-                        call: Call<UserCountResponse>,
-                        response: Response<UserCountResponse>
-                    ) {
-                        if (response.isSuccessful && response.body()?.success == true) {
-                            val count = response.body()?.totalUsers ?: 0
-                            textview_dashboard_total_residents.setText(count.toString())
-                        } else {
-                            Toast.makeText(this@AdminDashboardActivity, "Failed to load user count", Toast.LENGTH_SHORT).show()
-                        }
-                    }
+            fetchUserCount(bearerToken)
+            fetchComplaintCount(bearerToken)
+            fetchAppointmentCount(bearerToken)
 
-                    override fun onFailure(call: Call<UserCountResponse>, t: Throwable) {
-                        Toast.makeText(this@AdminDashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-                    }
-                })
+//            RetrofitClient.instance.getUserCount(bearerToken)
+//                .enqueue(object : Callback<UserCountResponse> {
+//                    override fun onResponse(
+//                        call: Call<UserCountResponse>,
+//                        response: Response<UserCountResponse>
+//                    ) {
+//                        if (response.isSuccessful && response.body()?.success == true) {
+//                            val count = response.body()?.totalUsers ?: 0
+//                            textview_admindashboard_total_residents.setText(count.toString())
+//                        } else {
+//                            Toast.makeText(this@AdminDashboardActivity, "Failed to load user count", Toast.LENGTH_SHORT).show()
+//                        }
+//                    }
+//
+//                    override fun onFailure(call: Call<UserCountResponse>, t: Throwable) {
+//                        Toast.makeText(this@AdminDashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+//                    }
+//                })
         } else {
             Toast.makeText(this, "Token not found. Please log in again.", Toast.LENGTH_SHORT).show()
         }
@@ -64,5 +81,72 @@ class AdminDashboardActivity : Activity() {
                 Intent(this, AdminCreateAnnouncementActivity::class.java)
             )
         }
+        card_filedcomplaints.setOnClickListener {
+            startActivity(
+                Intent(this, AdminAllFiledComplaintsActivity::class.java)
+            )
+        }
     }
+    private fun fetchUserCount (token: String){
+        RetrofitClient.instance.getUserCount(token)
+            .enqueue(object : Callback<UserCountResponse> {
+                override fun onResponse(
+                    call: Call<UserCountResponse>,
+                    response: Response<UserCountResponse>
+                ) {
+                    if (response.isSuccessful && response.body()?.success == true) {
+                        val count = response.body()?.totalUsers ?: 0
+                        textview_admindashboard_total_residents.setText(count.toString())
+                    } else {
+                        Toast.makeText(this@AdminDashboardActivity, "Failed to load user count", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<UserCountResponse>, t: Throwable) {
+                    Toast.makeText(this@AdminDashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
+    }
+
+    private fun fetchComplaintCount (token: String){
+        RetrofitClient.instance.getComplaintsCount(token)
+            .enqueue(object : Callback<ComplaintsCountResponse> {
+                override fun onResponse(
+                    call: Call<ComplaintsCountResponse>,
+                    response: Response<ComplaintsCountResponse>
+                ) {
+                    if (response.isSuccessful && response.body()?.success == true) {
+                        val count = response.body()?.totalComplaint ?: 0
+                        textview_admindashboard_total_filedcomplaints.setText(count.toString())
+                    } else {
+                        Toast.makeText(this@AdminDashboardActivity, "Failed to load user count", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<ComplaintsCountResponse>, t: Throwable) {
+                    Toast.makeText(this@AdminDashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
+    }
+    private fun fetchAppointmentCount (token: String){
+        RetrofitClient.instance.getAppointmentsCount(token)
+            .enqueue(object : Callback<AppointmentsCountResponse> {
+                override fun onResponse(
+                    call: Call<AppointmentsCountResponse>,
+                    response: Response<AppointmentsCountResponse>
+                ) {
+                    if (response.isSuccessful && response.body()?.success == true) {
+                        val count = response.body()?.totalAppointment ?: 0
+                        textview_admindashboard_total_appointments.setText(count.toString())
+                    } else {
+                        Toast.makeText(this@AdminDashboardActivity, "Failed to load user count", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<AppointmentsCountResponse>, t: Throwable) {
+                    Toast.makeText(this@AdminDashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
+    }
+
 }

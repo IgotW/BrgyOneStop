@@ -27,6 +27,7 @@ class DashboardActivity : Activity() {
         val textview_announcement_description = findViewById<TextView>(R.id.textview_announcement_description)
         val textview_announcement_date = findViewById<TextView>(R.id.textview_announcement_date)
         val dashboard_file_complaint = findViewById<LinearLayout>(R.id.dashboard_file_complaint)
+        val linearlayout_dashboard_scheduleappointment = findViewById<LinearLayout>(R.id.linearlayout_dashboard_scheduleappointment)
 
         val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = sharedPref.getString("token", null)
@@ -42,8 +43,6 @@ class DashboardActivity : Activity() {
                                 .replace(Regex(" +"), " ")
                             dashboard_name.setText(fullName)
 
-                            //to get the latest announcement
-
                             val call = RetrofitClient.instance.getAnnouncements(token)
 
                             call.enqueue(object : Callback<AnnouncementResponse> {
@@ -52,9 +51,7 @@ class DashboardActivity : Activity() {
                                         val announcementsList = response.body()!!.announcements
 
                                         if (announcementsList.isNotEmpty()) {
-                                            val latestAnnouncement = announcementsList[0] // first item is the latest
-
-                                            // Example: Display it in TextViews
+                                            val latestAnnouncement = announcementsList[0]
                                             textview_announcement_title.setText(latestAnnouncement.title)
                                             textview_announcement_description.setText(latestAnnouncement.description)
                                             textview_announcement_date.setText(latestAnnouncement.createdAt)
@@ -85,6 +82,11 @@ class DashboardActivity : Activity() {
                 startActivity(
                     Intent(this, FileComplaintActivity::class.java)
                 )
+            }
+            linearlayout_dashboard_scheduleappointment.setOnClickListener {
+//                startActivity(
+//                    Intent(this, Sc)
+//                )
             }
         } else {
             Toast.makeText(this, "No token found. Please login again.", Toast.LENGTH_SHORT).show()

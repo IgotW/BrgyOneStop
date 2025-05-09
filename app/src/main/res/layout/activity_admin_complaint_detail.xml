@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AdminComplaintDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/imageview_allcomplaints_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/arrow_back"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:clickable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filed Complaints"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="60dp" />
+        </LinearLayout>
+
+        <!-- Complaint Fields -->
+        <TextView
+            android:id="@+id/textview_complaint_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="24sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textview_complaint_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:id="@+id/textview_complaint_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp" />
+
+
+        <TextView
+            android:id="@+id/textview_complaint_createdat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Created At"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:id="@+id/textview_complaint_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Info"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attached File:"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp" />
+
+        <ImageView
+            android:id="@+id/imageview_complaint_file"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_nocontent"/>
+        <!-- Spinner and Button -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Status"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp" />
+
+        <Spinner
+            android:id="@+id/spinner_complaint_status"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:paddingLeft="15dp" />
+
+        <Button
+            android:id="@+id/button_complaint_update"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Update"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_shape"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>
