@@ -13,12 +13,17 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp">
             <ImageView
-                android:id="@+id/imageview_filecomplaint_back"
+                android:id="@+id/imageview_allcomplaints_back"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/arrow_back"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
+                android:clickable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filed Complaints"
                 android:clickable="true"/>
             <TextView
                 android:layout_width="wrap_content"

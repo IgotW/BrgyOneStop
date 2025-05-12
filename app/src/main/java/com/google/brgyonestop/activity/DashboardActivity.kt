@@ -10,8 +10,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.example.testingapplication.EmergencyHelpActivity
+import com.google.brgyonestop.BarangayDirectoryActivity
 import com.google.brgyonestop.HistoryActivity
 import com.google.brgyonestop.R
+import com.google.brgyonestop.ReportIncidentActivity
+import com.google.brgyonestop.TrackComplaintActivity
 import com.google.brgyonestop.response.AnnouncementResponse
 import com.google.brgyonestop.response.ProfileResponse
 import com.google.brgyonestop.utils.RetrofitClient
@@ -24,12 +28,61 @@ class DashboardActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        val dashboard_name = findViewById<TextView>(R.id.textview_dashboard_name)
-        val textview_announcement_title = findViewById<TextView>(R.id.textview_announcement_title)
-        val textview_announcement_description = findViewById<TextView>(R.id.textview_announcement_description)
-        val textview_announcement_date = findViewById<TextView>(R.id.textview_announcement_date)
-        val dashboard_file_complaint = findViewById<LinearLayout>(R.id.dashboard_file_complaint)
-        val linearlayout_dashboard_scheduleappointment = findViewById<LinearLayout>(R.id.linearlayout_dashboard_scheduleappointment)
+        val complaint = findViewById<LinearLayout>(R.id.filecomplaint)
+        complaint.setOnClickListener{
+            val intent = Intent(this, FileComplaintActivity::class.java)
+            startActivity(intent)
+        }
+        val help = findViewById<LinearLayout>(R.id.emergencyhelp)
+        help.setOnClickListener{
+            val intent = Intent(this, EmergencyHelpActivity::class.java)
+            startActivity(intent)
+        }
+        val appointment = findViewById<LinearLayout>(R.id.scheduleappointment)
+        appointment.setOnClickListener{
+            val intent = Intent(this, ScheduleAppointmentActivity::class.java)
+            startActivity(intent)
+        }
+        val incident = findViewById<LinearLayout>(R.id.reportincident)
+        incident.setOnClickListener{
+            val intent = Intent(this, ReportIncidentActivity::class.java)
+            startActivity(intent)
+        }
+        val track = findViewById<LinearLayout>(R.id.trackrequest)
+        track.setOnClickListener{
+            val intent = Intent(this, TrackComplaintActivity::class.java)
+            startActivity(intent)
+        }
+        val directory = findViewById<LinearLayout>(R.id.calldirectory)
+        directory.setOnClickListener{
+            val intent = Intent(this, BarangayDirectoryActivity::class.java)
+            startActivity(intent)
+        }
+        val home = findViewById<LinearLayout>(R.id.home_nav)
+        home.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
+        val inbox = findViewById<LinearLayout>(R.id.inbox_nav)
+        inbox.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
+        val call = findViewById<ImageView>(R.id.emergencyButton)
+        call.setOnClickListener{
+            val intent = Intent(this, EmergencyHelpActivity::class.java)
+            startActivity(intent)
+        }
+        val history = findViewById<LinearLayout>(R.id.history_nav)
+        history.setOnClickListener{
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
+        val profile = findViewById<LinearLayout>(R.id.profile_nav)
+        home.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
 
         val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = sharedPref.getString("token", null)
