@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <LinearLayout
         android:id="@+id/main_container"
         android:orientation="vertical"
@@ -31,7 +33,8 @@
                         android:layout_marginLeft="20dp"
                         android:src="@drawable/profile_user"/>
                     <TextView
-                        android:layout_width="190dp"
+                        android:id="@+id/textview_dashboard_name"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="   Francine Mecolle A. Duarte"
@@ -192,24 +195,18 @@
                             android:text="Today's Highlight"
                             android:textSize="25sp"
                             android:fontFamily="sans-serif-condensed"/>
-                        <LinearLayout
-                            android:id="@+id/highlight_show_more"
-                            android:layout_width="95dp"
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:text="Show more"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_marginLeft="85dp"/>
+                        <ImageView
+                            android:layout_width="20dp"
                             android:layout_height="25dp"
-                            android:orientation="horizontal"
-                            android:layout_marginLeft="85dp"
-                            android:layout_marginTop="10dp">
-                            <TextView
-                                android:layout_width="75dp"
-                                android:layout_height="wrap_content"
-                                android:text="Show more"
-                                android:textSize="15sp"
-                                android:fontFamily="sans-serif-condensed"/>
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="25dp"
-                                android:src="@drawable/showmore"/>
-                        </LinearLayout>
+                            android:src="@drawable/showmore"
+                            android:layout_marginTop="10dp"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="355dp"
@@ -243,7 +240,6 @@
                             android:text="Announcements"
                             android:textSize="25sp"
                             android:fontFamily="sans-serif-condensed"/>
-
                         <TextView
                             android:layout_width="75dp"
                             android:layout_height="wrap_content"

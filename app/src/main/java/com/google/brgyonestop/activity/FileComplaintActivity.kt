@@ -69,7 +69,7 @@ class FileComplaintActivity : Activity() {
         }
         imageview_filecomplaint_back.setOnClickListener {
             startActivity(
-                Intent(this, DashboardActivity::class.java)
+                Intent(this, UserAllFileComplaintsActivity::class.java)
             )
         }
     }

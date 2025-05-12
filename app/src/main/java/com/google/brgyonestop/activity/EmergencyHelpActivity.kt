@@ -1,22 +1,20 @@
-package com.example.testingapplication
+package com.google.brgyonestop.activity
 
-import android.app.Activity
+import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import android.Manifest
-import android.widget.LinearLayout
 import com.google.brgyonestop.HistoryActivity
 import com.google.brgyonestop.R
-import com.google.brgyonestop.activity.DashboardActivity
 
-
-class EmergencyHelpActivity : Activity() {
+class EmergencyHelpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emergencyhelp)
@@ -83,4 +81,3 @@ class EmergencyHelpActivity : Activity() {
         }
     }
 }
-

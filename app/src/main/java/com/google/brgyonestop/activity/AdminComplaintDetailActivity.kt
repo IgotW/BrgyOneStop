@@ -1,6 +1,7 @@
 package com.google.brgyonestop.activity
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
@@ -31,6 +32,7 @@ class AdminComplaintDetailActivity : Activity() {
         val textview_complaint_status = findViewById<TextView>(R.id.textview_complaint_status)
         val textview_complaint_createdat = findViewById<TextView>(R.id.textview_complaint_createdat)
         val textview_complaint_name = findViewById<TextView>(R.id.textview_complaint_name)
+        val imageview_allcomplaints_back = findViewById<ImageView>(R.id.imageview_allcomplaints_back)
         imageview_complaint_file = findViewById(R.id.imageview_complaint_file)
         statusSpinner = findViewById(R.id.spinner_complaint_status)
         button_complaint_update = findViewById(R.id.button_complaint_update)
@@ -90,11 +92,14 @@ class AdminComplaintDetailActivity : Activity() {
         }
 
 
-        if (file.isNotEmpty()) {
+        if (!file.isNullOrEmpty()) {
+            Log.d("ComplaintDebug", "Loading image from: $file")
             Glide.with(this)
                 .load(file)
-                .error(R.drawable.img_nocontent) // optional
+                .error(R.drawable.img_nocontent)
                 .into(imageview_complaint_file)
+        } else {
+            Log.d("ComplaintDebug", "File is null or empty")
         }
 
         val statusIndex = statusOptions.indexOf(status)
@@ -113,6 +118,13 @@ class AdminComplaintDetailActivity : Activity() {
         } else {
             Toast.makeText(this, "Token not found. Please log in again.", Toast.LENGTH_SHORT).show()
         }
+
+        imageview_allcomplaints_back.setOnClickListener{
+            startActivity(
+                Intent(this, AdminAllFiledComplaintsActivity::class.java)
+            )
+        }
+
     }
     private fun updateStatus(id: String, newStatus: String, token: String) {
         val body = mapOf("status" to newStatus)

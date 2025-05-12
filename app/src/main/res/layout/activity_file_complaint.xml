@@ -10,7 +10,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp">
             <ImageView
                 android:id="@+id/imageview_allcomplaints_back"
                 android:layout_width="32dp"
@@ -23,11 +24,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Filed Complaints"
+                android:clickable="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="File Complaint"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="22sp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="60dp" />
+                android:layout_marginLeft="65dp"/>
         </LinearLayout>
 
         <ScrollView

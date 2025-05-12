@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.AdminCreateAnnouncementActivity"
+    tools:context=".activity.AdminAnnouncementDetailsActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -14,22 +14,22 @@
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
         <ImageView
-            android:id="@+id/imageview_create_back"
+            android:id="@+id/imageview_edit_back"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/arrow_back"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-            android:clickable="true"/>
+            android:clickable="true" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create Announcement"
+            android:text="Edit Announcement"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="22sp"
             android:layout_gravity="center"
-            android:layout_marginLeft="35dp"/>
+            android:layout_marginLeft="45dp" />
     </LinearLayout>
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginLeft="30dp"/>
     <EditText
-        android:id="@+id/edittext_create_title"
+        android:id="@+id/edittext_edit_title"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/rounded_transparent_border"
@@ -69,7 +69,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textinputedittext_create_description"
+            android:id="@+id/textinputedittext_edit_description"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/rounded_transparent_border"
@@ -82,16 +82,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button_create_post"
+        android:id="@+id/button_edit_post"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:text="Post"
+        android:text="Save"
         android:textSize="18sp"
         android:background="@drawable/rounded_shape"
         android:backgroundTint="@color/secondary"
         android:textColor="@color/white"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"/>
-
 
 </LinearLayout>
