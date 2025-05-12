@@ -23,6 +23,7 @@
         <item>Garbage Issues</item>
         <item>Road Obstructions</item>
         <item>Street Lighting</item>
+        <item>Other</item>
     </string-array>
 
     <string-array name="scheduleappointment_items">

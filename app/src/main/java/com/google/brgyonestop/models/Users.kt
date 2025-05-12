@@ -5,7 +5,7 @@ import java.util.Date
 data class Users(
     val username: String,
     val email: String,
-    val phone: String,
+    val phoneNumber: String,
     val password: String,
     val firstName: String,
     val middleName: String,

@@ -6,9 +6,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Layout
 import android.util.Log
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.google.brgyonestop.HistoryActivity
 import com.google.brgyonestop.R
 import com.google.brgyonestop.response.AnnouncementResponse
 import com.google.brgyonestop.response.ProfileResponse
@@ -80,7 +82,7 @@ class DashboardActivity : Activity() {
                 })
             dashboard_file_complaint.setOnClickListener {
                 startActivity(
-                    Intent(this, FileComplaintActivity::class.java)
+                    Intent(this, UserAllFileComplaintsActivity::class.java)
                 )
             }
             linearlayout_dashboard_scheduleappointment.setOnClickListener {
@@ -88,6 +90,54 @@ class DashboardActivity : Activity() {
 //                    Intent(this, Sc)
 //                )
             }
+
+            val help = findViewById<LinearLayout>(R.id.emergencyhelp)
+            help.setOnClickListener{
+                val intent = Intent(this, EmergencyHelpActivity::class.java)
+                startActivity(intent)
+            }
+            val incident = findViewById<LinearLayout>(R.id.reportincident)
+            incident.setOnClickListener{
+//                val intent = Intent(this, ReportIncidentActivity::class.java)
+//                startActivity(intent)
+            }
+            val track = findViewById<LinearLayout>(R.id.trackrequest)
+            track.setOnClickListener{
+//                val intent = Intent(this, TrackComplaintActivity::class.java)
+//                startActivity(intent)
+            }
+            val directory = findViewById<LinearLayout>(R.id.calldirectory)
+            directory.setOnClickListener{
+//                val intent = Intent(this, BarangayDirectoryActivity::class.java)
+//                startActivity(intent)
+            }
+            val home = findViewById<LinearLayout>(R.id.home_nav)
+            home.setOnClickListener{
+                val intent = Intent(this, DashboardActivity::class.java)
+                startActivity(intent)
+            }
+            val inbox = findViewById<LinearLayout>(R.id.inbox_nav)
+            inbox.setOnClickListener{
+                val intent = Intent(this, DashboardActivity::class.java)
+                startActivity(intent)
+            }
+            val call = findViewById<ImageView>(R.id.emergencyButton)
+            call.setOnClickListener{
+                val intent = Intent(this, EmergencyHelpActivity::class.java)
+                startActivity(intent)
+            }
+            val history = findViewById<LinearLayout>(R.id.history_nav)
+            history.setOnClickListener{
+                val intent = Intent(this, HistoryActivity::class.java)
+                startActivity(intent)
+            }
+            val profile = findViewById<LinearLayout>(R.id.profile_nav)
+            profile.setOnClickListener{
+                val intent = Intent(this, UserProfileActivity::class.java)
+                startActivity(intent)
+            }
+
+
         } else {
             Toast.makeText(this, "No token found. Please login again.", Toast.LENGTH_SHORT).show()
         }
