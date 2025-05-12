@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -48,6 +49,7 @@ class AdminDashboardActivity : Activity() {
         textview_admindashboard_announcement_description = findViewById(R.id.textview_admindashboard_announcement_description)
         textview_announcement_date = findViewById(R.id.textview_announcement_date)
         val imageview_nav_residents = findViewById<ImageView>(R.id.imageview_nav_residents)
+        val admin_profile = findViewById<LinearLayout>(R.id.admin_profile)
 
         val sharedPref = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         val token = sharedPref.getString("token", null)
@@ -60,24 +62,6 @@ class AdminDashboardActivity : Activity() {
             fetchAppointmentCount(bearerToken)
             fetchLatestAnnouncement(bearerToken)
 
-//            RetrofitClient.instance.getUserCount(bearerToken)
-//                .enqueue(object : Callback<UserCountResponse> {
-//                    override fun onResponse(
-//                        call: Call<UserCountResponse>,
-//                        response: Response<UserCountResponse>
-//                    ) {
-//                        if (response.isSuccessful && response.body()?.success == true) {
-//                            val count = response.body()?.totalUsers ?: 0
-//                            textview_admindashboard_total_residents.setText(count.toString())
-//                        } else {
-//                            Toast.makeText(this@AdminDashboardActivity, "Failed to load user count", Toast.LENGTH_SHORT).show()
-//                        }
-//                    }
-//
-//                    override fun onFailure(call: Call<UserCountResponse>, t: Throwable) {
-//                        Toast.makeText(this@AdminDashboardActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-//                    }
-//                })
         } else {
             Toast.makeText(this, "Token not found. Please log in again.", Toast.LENGTH_SHORT).show()
         }
@@ -110,6 +94,11 @@ class AdminDashboardActivity : Activity() {
         imageview_nav_residents.setOnClickListener {
             startActivity(
                 Intent(this, AdminResidentsListActivity::class.java)
+            )
+        }
+        admin_profile.setOnClickListener {
+            startActivity(
+                Intent(this, AdminProfileActivity::class.java)
             )
         }
     }

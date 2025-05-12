@@ -41,7 +41,7 @@ class FileComplaintActivity : Activity() {
         val checkbox_filecomplaint_anonymously = findViewById<CheckBox>(R.id.checkbox_filecomplaint_anonymously)
         val button_filecomplaint_submit = findViewById<Button>(R.id.button_filecomplaint_submit)
         val button_filecomplaint_cancel = findViewById<Button>(R.id.button_filecomplaint_cancel)
-        val imageview_filecomplaint_back = findViewById<ImageView>(R.id.imageview_filecomplaint_back)
+        val imageview_filecomplaint_back = findViewById<ImageView>(R.id.imageview_allcomplaints_back)
 
         button_filecomplaint_choosefiles.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)

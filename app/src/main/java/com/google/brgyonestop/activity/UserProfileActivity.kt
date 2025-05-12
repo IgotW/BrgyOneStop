@@ -41,6 +41,7 @@ class UserProfileActivity : Activity() {
     private lateinit var textview_profile_zip: TextView
     private lateinit var button_profile_edit: Button
     private lateinit var button_profile_logout: Button
+    private lateinit var button_profile_changepass: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
@@ -59,6 +60,7 @@ class UserProfileActivity : Activity() {
         textview_profile_zip = findViewById(R.id.textview_profile_zip)
         button_profile_edit = findViewById(R.id.button_profile_edit)
         button_profile_logout = findViewById(R.id.button_profile_logout)
+        button_profile_changepass = findViewById(R.id.button_profile_changepass)
 
         val home = findViewById<LinearLayout>(R.id.home_nav)
         home.setOnClickListener{
@@ -84,6 +86,11 @@ class UserProfileActivity : Activity() {
         profile.setOnClickListener{
             val intent = Intent(this, UserProfileActivity::class.java)
             startActivity(intent)
+        }
+        button_profile_changepass.setOnClickListener {
+            startActivity(
+                Intent(this, ChangePasswordActivity::class.java)
+            )
         }
     }
     override fun onResume() {

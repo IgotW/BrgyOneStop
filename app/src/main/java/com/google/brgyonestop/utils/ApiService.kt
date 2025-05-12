@@ -83,6 +83,10 @@ interface ApiService {
     fun getAnnouncements(@Header("Authorization") token: String
     ): Call<AnnouncementResponse>
 
+    @GET("/api/announcement/user-announcements")
+    fun getUserAnnouncements(@Header("Authorization") token: String
+    ): Call<AnnouncementResponse>
+
     //get allusers
 
     @GET("/api/admin/count-users")
@@ -144,7 +148,7 @@ interface ApiService {
         @Body updatedData: UpdateProfileRequest
     ): Call<ProfileResponse>
 
-    @PUT("/user/change-password")
+    @PUT("/api/users/auth/change-password")
     fun changePassword(
         @Header("Authorization") token: String,
         @Body request: ChangePasswordRequest

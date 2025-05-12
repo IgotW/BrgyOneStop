@@ -36,5 +36,10 @@ class AdminProfileActivity : Activity() {
                 Intent(this, AdminDashboardActivity::class.java)
             )
         }
+        imageview_nav_residents.setOnClickListener {
+            startActivity(
+                Intent(this, AdminResidentsListActivity::class.java)
+            )
+        }
     }
 }

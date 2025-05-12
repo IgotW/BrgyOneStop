@@ -162,7 +162,8 @@
                     android:backgroundTint="@color/primary_button"
                     android:fontFamily="sans-serif-condensed"
                     android:letterSpacing="0.1"
-                    android:text="SCHEDULE APPOINTMENT" />
+                    android:text="SCHEDULE APPOINTMENT"
+                    android:textColor="@color/white"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="100dp"/>

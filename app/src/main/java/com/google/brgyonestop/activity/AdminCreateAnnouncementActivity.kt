@@ -28,7 +28,7 @@ class AdminCreateAnnouncementActivity : Activity() {
 
         val imageview_create_back = findViewById<ImageView>(R.id.imageview_create_back)
         val edittext_create_title = findViewById<EditText>(R.id.edittext_create_title)
-        val textinputedittext_create_description = findViewById<TextInputEditText>(R.id.textinputedittext_create_description)
+        val textinputedittext_create_description = findViewById<EditText>(R.id.textinputedittext_create_description)
         val button_create_post = findViewById<Button>(R.id.button_create_post)
 
 

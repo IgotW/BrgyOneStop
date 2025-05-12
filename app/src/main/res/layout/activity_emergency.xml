@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    android:background="@color/white"
-    tools:context=".EmergencyActivity">
+    android:background="@color/white">
 
     <!-- SOS Button (Crimson) -->
     <Button

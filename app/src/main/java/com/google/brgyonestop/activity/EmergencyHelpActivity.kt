@@ -19,7 +19,7 @@ class EmergencyHelpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emergencyhelp)
 
-        val backArrowImageView: ImageView = findViewById(R.id.leftarrow)
+        val backArrowImageView: ImageView = findViewById(R.id.imageview_allcomplaints_back)
 
         backArrowImageView.setOnClickListener {
             onBackPressed()

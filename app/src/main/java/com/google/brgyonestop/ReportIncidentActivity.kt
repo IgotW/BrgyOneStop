@@ -10,8 +10,8 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.example.testingapplication.EmergencyHelpActivity
 import com.google.brgyonestop.activity.DashboardActivity
+import com.google.brgyonestop.activity.EmergencyHelpActivity
 import java.util.Locale
 
 class ReportIncidentActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class ReportIncidentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report_incident)
 
-        val backArrowImageView: ImageView = findViewById(R.id.leftarrow)
+        val backArrowImageView: ImageView = findViewById(R.id.imageview_allcomplaints_back)
 
         backArrowImageView.setOnClickListener {
             onBackPressed()

@@ -60,26 +60,20 @@
         android:textSize="18sp"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="30dp"/>
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
+        android:id="@+id/textinputedittext_edit_description"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        app:hintEnabled="false"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textinputedittext_edit_description"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/rounded_transparent_border"
-            android:hint="Enter your description here"
-            android:backgroundTint="@color/primary"
-            android:paddingLeft="15dp"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:maxLines="10" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="@drawable/rounded_transparent_border"
+        android:hint="Enter your description here"
+        android:backgroundTint="@color/primary"
+        android:paddingLeft="15dp"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:paddingTop="10dp"/>
 
     <Button
         android:id="@+id/button_edit_post"
