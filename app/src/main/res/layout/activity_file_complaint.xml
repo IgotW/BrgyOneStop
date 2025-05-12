@@ -8,24 +8,26 @@
     android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
             <ImageView
-                android:id="@+id/imageview_filecomplaint_back"
+                android:id="@+id/imageview_allcomplaints_back"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/arrow_back"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"/>
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:clickable="true" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="File Complaint"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="23sp"
+                android:text="Filed Complaints"
                 android:textColor="@color/black"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="90dp"/>
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="60dp" />
         </LinearLayout>
 
         <ScrollView

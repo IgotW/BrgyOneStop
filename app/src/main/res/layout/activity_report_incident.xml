@@ -9,226 +9,248 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:src="@drawable/leftarrow"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="15dp"/>
+                android:id="@+id/imageview_allcomplaints_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/arrow_back"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:clickable="true" />
             <TextView
-                android:layout_width="143dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Report Incident"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="23sp"
                 android:textColor="@color/black"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="110dp"/>
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="90dp" />
         </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="390dp"
-                android:layout_height="match_parent"
-                android:text="If you’ve witnessed or experienced an incident within the barangay, you can report it here for proper documentation and action. Please provide complete and truthful information to help us assess and respond accordingly."
-                android:textStyle="italic"
-                android:textColor="#686565"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="14sp"
-                android:padding="10dp"
-                android:justificationMode="inter_word"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginTop="7dp"
-                android:justificationMode="inter_word"
-                android:lineSpacingExtra="4dp"
-                android:paddingLeft="17dp"
-                android:text="Reminders:"
-                android:textSize="14sp"
-                android:textStyle="italic"
-                android:textColor="#686565"
-                android:fontFamily="sans-serif-condensed"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textStyle="italic"
-                android:textColor="#686565"
-                android:fontFamily="sans-serif-condensed"
-                android:justificationMode="inter_word"
-                android:paddingLeft="35dp"
-                android:paddingRight="17dp"
-                android:textSize="14sp"
-                android:layout_marginTop="5dp"
-                android:text="- Provide a clear and detailed description of the incident."/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textStyle="italic"
-                android:textColor="#686565"
-                android:fontFamily="sans-serif-condensed"
-                android:justificationMode="inter_word"
-                android:paddingLeft="35dp"
-                android:paddingRight="17dp"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp"
-                android:text="- Include the date, time, and location where it happened."/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textStyle="italic"
-                android:textColor="#686565"
-                android:fontFamily="sans-serif-condensed"
-                android:justificationMode="inter_word"
-                android:paddingLeft="35dp"
-                android:paddingRight="17dp"
-                android:textSize="14sp"
-                android:layout_marginTop="10dp"
-                android:text="- If available, attach any evidence (photos, videos, documents)."/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textStyle="italic"
-                android:textColor="#686565"
-                android:fontFamily="sans-serif-condensed"
-                android:justificationMode="inter_word"
-                android:paddingLeft="35dp"
-                android:paddingRight="17dp"
-                android:layout_marginTop="10dp"
-                android:textSize="14sp"
-                android:text="- Your personal information will be kept confidential, in accordance with data privacy laws."/>
-
+            android:layout_height="match_parent">
             <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="690dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@color/second_background"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Incident:"
-                    android:textSize="17sp" />
-
-                <EditText
-                    android:layout_width="330dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:hint="Incident here"
-                    android:padding="7dp" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="25dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Date: "
-                    android:textSize="17sp" />
-
-                <EditText
-                    android:layout_width="330dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:hint="Enter phone name"
-                    android:padding="7dp" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="25dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Time: "
-                    android:textSize="17sp" />
-
-                <Spinner
-                    android:layout_width="330dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:entries="@array/scheduleappointment_items" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="25dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Location:"
-                    android:textSize="17sp" />
-
-                <EditText
-                    android:layout_width="330dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:hint="Enter phone name"
-                    android:padding="7dp" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="25dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Details: "
-                    android:textSize="17sp" />
-
-                <EditText
-                    android:id="@+id/multilineTextBox"
-                    android:layout_width="330dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="top|start"
-                    android:hint="Please enter incident details here ..."
-                    android:inputType="textMultiLine"
-                    android:minLines="4"
-                    android:padding="12dp"
-                    android:textSize="17sp" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="25dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Attachments"
-                    android:textSize="17sp" />
-
-                <Button
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="20dp"
-                    android:backgroundTint="@color/primary_button"
-                    android:text="CHOOSE FILE(S)"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <Button
-                android:layout_width="300dp"
-                android:layout_height="55dp"
-                android:backgroundTint="@color/secondary_button"
-                android:text="REPORT INCIDENT"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"/>
-            <View
                 android:layout_width="match_parent"
-                android:layout_height="100dp"/>
-        </LinearLayout>
-    </ScrollView>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="390dp"
+                    android:layout_height="match_parent"
+                    android:text="If you’ve witnessed or experienced an incident within the barangay, you can report it here for proper documentation and action. Please provide complete and truthful information to help us assess and respond accordingly."
+                    android:textStyle="italic"
+                    android:textColor="#686565"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:justificationMode="inter_word"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="7dp"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingLeft="17dp"
+                    android:text="Reminders:"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:textColor="#686565"
+                    android:fontFamily="sans-serif-condensed"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="italic"
+                    android:textColor="#686565"
+                    android:fontFamily="sans-serif-condensed"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="17dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:text="- Provide a clear and detailed description of the incident."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="italic"
+                    android:textColor="#686565"
+                    android:fontFamily="sans-serif-condensed"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="17dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="- Include the date, time, and location where it happened."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="italic"
+                    android:textColor="#686565"
+                    android:fontFamily="sans-serif-condensed"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="17dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="- If available, attach any evidence (photos, videos, documents)."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="italic"
+                    android:textColor="#686565"
+                    android:fontFamily="sans-serif-condensed"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="17dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:text="- Your personal information will be kept confidential, in accordance with data privacy laws."/>
+
+                <LinearLayout
+                    android:layout_width="380dp"
+                    android:layout_height="700dp"
+                    android:orientation="vertical"
+                    android:background="@color/second_background"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:padding="15dp">
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Incident:"
+                        android:textSize="17sp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <EditText
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:hint="Incident here"
+                        android:background="@color/white"
+                        android:layout_gravity="center"
+                        android:padding="7dp"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Date: "
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/show_datetext"
+                            android:layout_width="300dp"
+                            android:layout_height="40dp"
+                            android:hint="Enter phone name"
+                            android:background="@color/white"
+                            android:layout_gravity="center"
+                            android:padding="7dp"
+                            android:layout_marginLeft="10dp"
+                            android:focusable="false"
+                            android:clickable="false" />
+                        <ImageView
+                            android:id="@+id/date_picker"
+                            android:layout_width="35dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/down_arrow"
+                            android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Time: "
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/show_timetext"
+                            android:layout_width="300dp"
+                            android:layout_height="40dp"
+                            android:hint="Enter phone name"
+                            android:background="@color/white"
+                            android:layout_gravity="center"
+                            android:padding="7dp"
+                            android:layout_marginLeft="10dp"
+                            android:focusable="false"
+                            android:clickable="false" />
+                        <ImageView
+                            android:id="@+id/time_picker"
+                            android:layout_width="35dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/down_arrow"
+                            android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Location:"
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <EditText
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:hint="Enter phone name"
+                        android:background="@color/white"
+                        android:layout_gravity="center"
+                        android:padding="7dp"/>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Details: "
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <EditText
+                        android:id="@+id/multilineTextBox"
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Please enter incident details here ..."
+                        android:inputType="textMultiLine"
+                        android:minLines="4"
+                        android:gravity="top|start"
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:textSize="17sp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="Attachments"
+                        android:textSize="17sp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="sans-serif-condensed"/>
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:text="CHOOSE FILE(S)"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/primary_button"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="20dp"/>
+                </LinearLayout>
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/secondary_button"
+                    android:text="REPORT INCIDENT"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/bottom_nav"
@@ -242,6 +264,7 @@
         android:elevation="4dp">
 
         <LinearLayout
+            android:id="@+id/home_nav"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -260,6 +283,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/inbox_nav"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -283,6 +307,7 @@
             android:layout_height="match_parent"/>
 
         <LinearLayout
+            android:id="@+id/history_nav"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -301,6 +326,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/profile_nav"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"

@@ -8,23 +8,26 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
             <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:src="@drawable/leftarrow"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="15dp"/>
+                android:id="@+id/imageview_allcomplaints_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/arrow_back"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:clickable="true" />
             <TextView
-                android:layout_width="205dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Schedule Appointment"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="23sp"
                 android:textColor="@color/black"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="75dp"/>
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp" />
         </LinearLayout>
         <ScrollView
             android:layout_width="match_parent"
@@ -38,12 +41,12 @@
                     android:layout_height="90dp"
                     android:textStyle="italic"
                     android:textColor="#686565"
-                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15sp"
                     android:paddingLeft="13dp"
                     android:paddingRight="13dp"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="4dp"
+                    android:layout_marginTop="10dp"
                     android:text="The available dates and time slots displayed below are based on the official working hours of the barangay and the remaining available slots for each service. Once a time slot is fully booked, it will no longer appear in the list." />
                 <LinearLayout
                     android:layout_width="380dp"
