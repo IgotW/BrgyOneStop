@@ -50,7 +50,7 @@
                     android:text="The available dates and time slots displayed below are based on the official working hours of the barangay and the remaining available slots for each service. Once a time slot is fully booked, it will no longer appear in the list." />
                 <LinearLayout
                     android:layout_width="380dp"
-                    android:layout_height="715dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:background="@color/second_background"
                     android:layout_gravity="center"
@@ -59,43 +59,17 @@
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="35dp"
-                        android:text="Name:"
-                        android:textSize="17sp"
-                        android:fontFamily="sans-serif-condensed"/>
-                    <EditText
-                        android:layout_width="330dp"
-                        android:layout_height="40dp"
-                        android:hint="Enter full name"
-                        android:background="@color/white"
-                        android:layout_gravity="center"
-                        android:padding="7dp"/>
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="35dp"
-                        android:text="Contact no.: "
-                        android:textSize="17sp"
-                        android:layout_marginTop="25dp"
-                        android:fontFamily="sans-serif-condensed" />
-                    <EditText
-                        android:layout_width="330dp"
-                        android:layout_height="40dp"
-                        android:hint="Enter phone name"
-                        android:background="@color/white"
-                        android:layout_gravity="center"
-                        android:padding="7dp"/>
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="35dp"
-                        android:text="Service Selection: "
+                        android:text="Title: "
                         android:fontFamily="sans-serif-condensed"
                         android:textSize="17sp"
-                        android:layout_marginTop="25dp"/>
-                    <Spinner
+                        android:layout_marginTop="10dp"/>
+                    <EditText
+                        android:id="@+id/scheduleappointment_title"
                         android:layout_width="330dp"
                         android:layout_height="40dp"
                         android:background="@color/white"
-                        android:entries="@array/scheduleappointment_items"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        android:hint="Enter Title"/>
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="35dp"
@@ -104,6 +78,7 @@
                         android:layout_marginTop="25dp"
                         android:fontFamily="sans-serif-condensed"/>
                     <EditText
+                        android:id="@+id/scheduleappointment_date"
                         android:layout_width="330dp"
                         android:layout_height="40dp"
                         android:hint="Choose Prefered Date"
@@ -118,11 +93,10 @@
                         android:layout_marginTop="25dp"
                         android:fontFamily="sans-serif-condensed"/>
                     <EditText
-                        android:id="@+id/dateEditText"
+                        android:id="@+id/scheduleappointment_time"
                         android:layout_width="330dp"
                         android:layout_height="40dp"
                         android:hint="Choose Prefered Time"
-                        android:focusable="false"
                         android:layout_gravity="center"
                         android:background="@color/white"
                         android:padding="7dp"/>
@@ -134,35 +108,24 @@
                         android:layout_marginTop="25dp"
                         android:fontFamily="sans-serif-condensed"/>
                     <EditText
+                        android:id="@+id/scheduleappointment_purpose"
                         android:layout_width="330dp"
                         android:layout_height="40dp"
-                        android:hint="Enter phone name"
+                        android:hint="Describe purpose"
                         android:background="@color/white"
                         android:layout_gravity="center"
-                        android:padding="7dp"/>
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="35dp"
-                        android:text="Attachments"
-                        android:textSize="17sp"
-                        android:layout_marginTop="25dp"
-                        android:fontFamily="sans-serif-condensed"/>
-                    <Button
-                        android:layout_width="150dp"
-                        android:layout_height="50dp"
-                        android:text="CHOOSE FILE(S)"
-                        android:textSize="12sp"
-                        android:backgroundTint="@color/primary_button"
-                        android:textColor="@color/white"
-                        android:layout_marginLeft="20dp"/>
+                        android:padding="7dp"
+                        android:layout_marginBottom="20dp"/>
                 </LinearLayout>
                 <Button
+                    android:id="@+id/scheduleappointment_button"
                     android:layout_width="300dp"
-                    android:layout_height="55dp"
-                    android:backgroundTint="@color/primary_button"
+                    android:layout_height="50dp"
                     android:text="SCHEDULE APPOINTMENT"
                     android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_shape"
+                    android:backgroundTint="@color/primary"
                     android:textColor="@color/white"/>
                 <View
                     android:layout_width="match_parent"

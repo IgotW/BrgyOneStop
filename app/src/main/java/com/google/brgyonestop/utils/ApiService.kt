@@ -2,6 +2,7 @@ package com.google.brgyonestop.utils
 
 import com.google.brgyonestop.models.Announcement
 import com.google.brgyonestop.request.AnnouncementRequest
+import com.google.brgyonestop.request.AppointmentRequest
 import com.google.brgyonestop.request.ChangePasswordRequest
 import com.google.brgyonestop.request.EmailRequest
 import com.google.brgyonestop.request.OtpRequest
@@ -10,6 +11,7 @@ import com.google.brgyonestop.request.ResetPasswordRequest
 import com.google.brgyonestop.request.UpdateProfileRequest
 import com.google.brgyonestop.response.AnnouncementResponse
 import com.google.brgyonestop.response.ApiResponse
+import com.google.brgyonestop.response.AppointmentResponse
 import com.google.brgyonestop.response.AppointmentsCountResponse
 import com.google.brgyonestop.response.ComplaintResponse
 import com.google.brgyonestop.response.ComplaintsCountResponse
@@ -72,10 +74,15 @@ interface ApiService {
     ): Call<ResponseBody>
 
     //post /schedule-appointment
+    @POST("/api/users/auth/schedule-appointment")
+    fun scheduleAppointment(
+        @Header("Authorization") token: String,
+        @Body request: AppointmentRequest
+    ): Call<AppointmentResponse>
 
 
 
-    @GET("api/users/auth/profile")
+    @GET("/api/users/auth/profile")
     fun getUserProfile(@Header("Authorization") token: String
     ): Call<ProfileResponse>
 
@@ -107,6 +114,15 @@ interface ApiService {
     ): Call<ComplaintsCountResponse>
 
     //get /appointments
+    @GET("/api/users/auth/appointments")
+    fun getAppointments(
+        @Header("Authorization") token: String
+    ): Call<AppointmentResponse>
+
+    @GET("/api/admin/appointments")
+    fun getAdminAppointments(
+        @Header("Authorization") token: String
+    ): Call<AppointmentResponse>
 
     //get /count-appointments
     @GET("/api/admin/count-appointments")
@@ -153,6 +169,14 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Body request: ChangePasswordRequest
     ): Call<ApiResponse>
+
+    @PUT("/api/admin/appointment-status/{id}")
+    fun updateAppointmentStatus(
+        @Path("id") id: String,
+        @Body body: Map<String, String>,
+        @Header("Authorization") token: String
+    ): Call<Void>
+
 
     @DELETE("/api/announcement/announcements/{id}")
     fun deleteAnnouncement(

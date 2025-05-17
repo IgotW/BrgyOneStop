@@ -12,7 +12,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
             <ImageView
-                android:id="@+id/imageview_allcomplaints_back"
+                android:id="@+id/imageview_schedule_back"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/arrow_back"
@@ -36,7 +36,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="550dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -154,15 +155,24 @@
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/scheduleappointment_button"
-                    android:layout_width="330dp"
+                    android:id="@+id/appointment_button"
+                    android:layout_width="300dp"
                     android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="19dp"
-                    android:backgroundTint="@color/primary_button"
-                    android:fontFamily="sans-serif-condensed"
-                    android:letterSpacing="0.1"
                     android:text="SCHEDULE APPOINTMENT"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_shape"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/allscheduleappointment_button"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:text="ALL SCHEDULE APPOINTMENT"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_shape"
+                    android:backgroundTint="@color/third"
                     android:textColor="@color/white"/>
                 <View
                     android:layout_width="match_parent"

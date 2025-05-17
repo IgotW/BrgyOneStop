@@ -45,6 +45,7 @@ class AdminDashboardActivity : Activity() {
         val textview_admindashboard_seemore = findViewById<TextView>(R.id.textview_admindashboard_seemore)
         val imageview_admindashboard_seemore = findViewById<ImageView>(R.id.imageview_admindashboard_seemore)
         val card_filedcomplaints = findViewById<CardView>(R.id.card_filedcomplaints)
+        val card_appointments = findViewById<CardView>(R.id.card_appointments)
         textview_admindashboard_announcement_title = findViewById(R.id.textview_admindashboard_announcement_title)
         textview_admindashboard_announcement_description = findViewById(R.id.textview_admindashboard_announcement_description)
         textview_announcement_date = findViewById(R.id.textview_announcement_date)
@@ -99,6 +100,11 @@ class AdminDashboardActivity : Activity() {
         admin_profile.setOnClickListener {
             startActivity(
                 Intent(this, AdminProfileActivity::class.java)
+            )
+        }
+        card_appointments.setOnClickListener{
+            startActivity(
+                Intent(this, AdminAllAppointmentActivity::class.java)
             )
         }
     }
