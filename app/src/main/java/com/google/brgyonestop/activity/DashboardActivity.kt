@@ -31,7 +31,6 @@ class DashboardActivity : Activity() {
         val dashboard_file_complaint = findViewById<LinearLayout>(R.id.dashboard_file_complaint)
         val linearlayout_dashboard_scheduleappointment = findViewById<LinearLayout>(R.id.linearlayout_dashboard_scheduleappointment)
         val textview_dashboard_showmore = findViewById<TextView>(R.id.textview_dashboard_showmore)
-        val imageview_dashboard_showmore = findViewById<ImageView>(R.id.imageview_dashboard_showmore)
 
         val sharedPref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = sharedPref.getString("token", null)
@@ -81,11 +80,6 @@ class DashboardActivity : Activity() {
                                         }
 
                                         textview_dashboard_showmore.setOnClickListener{
-                                            startActivity(
-                                                Intent(this@DashboardActivity, UserAllAnnouncementActivity::class.java)
-                                            )
-                                        }
-                                        imageview_dashboard_showmore.setOnClickListener {
                                             startActivity(
                                                 Intent(this@DashboardActivity, UserAllAnnouncementActivity::class.java)
                                             )

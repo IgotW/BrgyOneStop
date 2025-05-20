@@ -22,12 +22,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Schedule Appointment"
+                android:text="Track Complaint"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="22sp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="50dp" />
+                android:layout_marginLeft="55dp" />
         </LinearLayout>
         <ScrollView
             android:layout_width="match_parent"
@@ -38,10 +38,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <LinearLayout
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:background="@color/second_background"
-                    android:padding="20dp"
+                    android:backgroundTint="@color/second_background"
+                    android:background="@drawable/rounded_shape"
+                    android:padding="7dp"
                     android:orientation="vertical"
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp">
@@ -53,84 +54,97 @@
                         android:textSize="30sp"
                         android:fontFamily="sans-serif-condensed"
                         android:textStyle="bold"
-                        android:layout_marginStart="15dp" />
+                        android:layout_marginLeft="10dp" />
                     <TextView
                         android:id="@+id/account_name_label_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/account_name_label_value"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:layout_marginStart="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp" />
                     <TextView
                         android:id="@+id/service_type_label_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/service_type_label_value"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:layout_marginStart="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp" />
                     <TextView
                         android:id="@+id/location_label_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/location_label_value"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:layout_marginStart="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp" />
                     <TextView
                         android:id="@+id/preferred_date_label_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/preferred_date_label_value"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:layout_marginStart="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp" />
                     <TextView
                         android:id="@+id/preferred_time_label_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/preferred_time_label_value"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:layout_marginStart="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp" />
                     <TextView
-                        android:id="@+id/request_details_value"
-                        android:layout_width="match_parent"
+                        android:id="@+id/request_details"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/request_details_value"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-condensed"
+                        android:text="Request Details:"
+                        android:textSize="17sp"
                         android:justificationMode="inter_word"
-                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp" />
+
+
+                    <TextView
+                        android:id="@+id/request_details_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/request_details_value"
+                        android:textSize="15sp" />
+
+
                     <TextView
                         android:id="@+id/uploaded_image_video_label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/uploaded_image_video"
-                        android:textSize="20sp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:layout_marginStart="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="15dp" />
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginStart="30dp">
+                        android:layout_marginLeft="10dp" >
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="110dp"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:src="@drawable/imagesample"
                             android:contentDescription="@null" />
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="110dp"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/imagesample"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@null" />
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:src="@drawable/imagesample"
                             android:layout_marginStart="10dp"
                             android:contentDescription="@null" />
@@ -140,19 +154,20 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="10dp">
                         <TextView
                             android:id="@+id/status_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/status_label"
-                            android:textSize="20sp"
+                            android:textSize="17sp"
                             android:fontFamily="sans-serif-condensed"
                             android:layout_marginStart="15dp" />
                         <ImageView
                             android:id="@+id/status_icon"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
                             android:src="@drawable/greencircle"
                             android:layout_marginStart="15dp"
                             android:contentDescription="@string/status_completed" />
@@ -161,7 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/status_completed"
-                            android:textSize="20sp"
+                            android:textSize="17sp"
                             android:fontFamily="sans-serif-condensed"
                             android:layout_marginStart="15dp" />
                     </LinearLayout>
@@ -183,6 +198,7 @@
         android:layout_alignParentBottom="true"
         android:elevation="4dp">
 
+
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -201,6 +217,7 @@
                 android:textSize="12sp"
                 android:fontFamily="sans-serif-condensed" />
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_weight="1"
@@ -221,10 +238,12 @@
                 android:fontFamily="sans-serif-condensed" />
         </LinearLayout>
 
+
         <View
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
+
 
         <LinearLayout
             android:layout_weight="1"
@@ -244,6 +263,7 @@
                 android:textSize="12sp"
                 android:fontFamily="sans-serif-condensed" />
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_weight="1"
@@ -287,5 +307,6 @@
         android:layout_marginBottom="7dp"
         android:textSize="12sp"
         android:fontFamily="sans-serif-condensed" />
+
 
 </RelativeLayout>

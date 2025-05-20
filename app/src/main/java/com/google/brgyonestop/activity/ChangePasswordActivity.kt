@@ -2,6 +2,7 @@ package com.google.brgyonestop.activity
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -52,6 +53,11 @@ class ChangePasswordActivity : Activity() {
                 val request = ChangePasswordRequest(oldPass, newPass)
                 changePassword("Bearer $token", request)
             }
+        }
+        button_changepass_cancel.setOnClickListener {
+            startActivity(
+                Intent(this, UserProfileActivity::class.java)
+            )
         }
     }
     private fun changePassword(token: String, request: ChangePasswordRequest) {

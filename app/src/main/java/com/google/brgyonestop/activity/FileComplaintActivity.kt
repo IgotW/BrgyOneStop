@@ -39,8 +39,7 @@ class FileComplaintActivity : Activity() {
         val multilineTextBox = findViewById<EditText>(R.id.multilineTextBox)
         val button_filecomplaint_choosefiles = findViewById<Button>(R.id.button_filecomplaint_choosefiles)
         val checkbox_filecomplaint_anonymously = findViewById<CheckBox>(R.id.checkbox_filecomplaint_anonymously)
-        val button_filecomplaint_submit = findViewById<Button>(R.id.button_filecomplaint_submit)
-        val button_filecomplaint_cancel = findViewById<Button>(R.id.button_filecomplaint_cancel)
+        val button_filecomplaint_submit = findViewById<Button>(R.id.submit_complaint_button)
         val imageview_filecomplaint_back = findViewById<ImageView>(R.id.imageview_allcomplaints_back)
 
         button_filecomplaint_choosefiles.setOnClickListener {
@@ -61,11 +60,6 @@ class FileComplaintActivity : Activity() {
             } else {
                 Toast.makeText(this, "Please complete all required fields", Toast.LENGTH_SHORT).show()
             }
-        }
-        button_filecomplaint_cancel.setOnClickListener {
-            startActivity(
-                Intent(this, DashboardActivity::class.java)
-            )
         }
         imageview_filecomplaint_back.setOnClickListener {
             startActivity(

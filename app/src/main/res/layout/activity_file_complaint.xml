@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,85 +31,84 @@
                 android:layout_marginLeft="65dp"/>
         </LinearLayout>
 
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:text="Welcome! Please use the form below to submit your complaint to the barangay. Your concerns are important to us."
                     android:textStyle="italic"
                     android:textColor="#686565"
                     android:fontFamily="sans-serif-condensed"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:paddingVertical="10dp"
                     android:padding="10dp"
                     android:layout_gravity="center"/>
                 <LinearLayout
-                    android:layout_width="370dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="330dp"
+                    android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
-                    android:background="@color/second_background">
+                    android:padding="20dp"
+                    android:backgroundTint="@color/second_background"
+                    android:background="@drawable/rounded_shape">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Complaint Form"
                         android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:fontFamily="sans-serif-condensed"
                         android:textSize="21sp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginLeft="10dp"
                         android:textAlignment="center"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:text="Category Selection:"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="Type"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:fontFamily="sans-serif-condensed"
-                        android:textSize="17sp"
-                        android:padding="10dp"
-                        android:layout_marginLeft="7dp"/>
+                        android:textSize="17sp"/>
                     <Spinner
                         android:id="@+id/spinner_filecomplaint_catergory"
-                        android:layout_width="330dp"
+                        android:layout_width="285dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/rounded_shape"
                         android:entries="@array/filecomplaint_items" />
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:text="Complaint Details:"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="Details"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:fontFamily="sans-serif-condensed"
                         android:textSize="17sp"
-                        android:padding="10dp"
-                        android:layout_marginLeft="7dp"
                         android:layout_marginTop="20dp"/>
                     <EditText
                         android:id="@+id/multilineTextBox"
-                        android:layout_width="330dp"
+                        android:layout_width="285dp"
                         android:layout_height="wrap_content"
                         android:hint="Please enter complaint details here ..."
                         android:inputType="textMultiLine"
                         android:minLines="4"
                         android:gravity="top|start"
-                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/rounded_shape"
                         android:padding="12dp"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:layout_gravity="center"/>
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:text="Attachments:"
                         android:textStyle="bold"
@@ -117,17 +116,17 @@
                         android:fontFamily="sans-serif-condensed"
                         android:textSize="17sp"
                         android:padding="10dp"
-                        android:layout_marginLeft="7dp"
                         android:layout_marginTop="20dp"/>
                     <Button
                         android:id="@+id/button_filecomplaint_choosefiles"
                         android:layout_width="150dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:text="CHOOSE FILE(S)"
+                        android:background="@drawable/rounded_shape"
                         android:textSize="12sp"
                         android:backgroundTint="@color/primary_button"
                         android:textColor="@color/white"
-                        android:layout_marginLeft="20dp"/>
+                        android:layout_marginLeft="10dp"/>
                     <TextView
                         android:id="@+id/textview_filecomplaint_selected_file"
                         android:layout_width="match_parent"
@@ -135,47 +134,34 @@
                         android:text="No file selected"
                         android:padding="8dp"
                         android:textSize="14sp"
-                        android:layout_marginLeft="25dp"/>
+                        android:layout_marginLeft="15dp"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
                         android:text="Anonymous Option:"
                         android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:fontFamily="sans-serif-condensed"
                         android:textSize="17sp"
-                        android:padding="10dp"
-                        android:layout_marginLeft="7dp"
                         android:layout_marginTop="15dp"/>
                     <CheckBox
                         android:id="@+id/checkbox_filecomplaint_anonymously"
-                        android:layout_width="330dp"
+                        android:layout_width="270dp"
                         android:layout_height="50dp"
-                        android:layout_marginLeft="27dp"
                         android:text="File this complaint anonymously"
                         android:layout_marginBottom="20dp"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/button_filecomplaint_submit"
-                    android:layout_width="270dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
-                    android:backgroundTint="@color/primary_button"
-                    android:text="SUBMIT COMPLAINT"
-                    android:textColor="@color/white" />
 
                 <Button
-                    android:id="@+id/button_filecomplaint_cancel"
-                    android:layout_width="270dp"
+                    android:id="@+id/submit_complaint_button"
+                    android:layout_width="250dp"
                     android:layout_height="50dp"
-                    android:text="CANCEL"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/secondary"
+                    android:backgroundTint="@color/primary_button"
+                    android:text="SUBMIT"
+                    android:background="@drawable/rounded_shape"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="30dp"/>
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="100dp"/>
@@ -192,6 +178,7 @@
         android:weightSum="5"
         android:layout_alignParentBottom="true"
         android:elevation="4dp">
+
 
         <LinearLayout
             android:layout_weight="1"
@@ -211,6 +198,7 @@
                 android:fontFamily="sans-serif-condensed"/>
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -229,10 +217,12 @@
                 android:fontFamily="sans-serif-condensed"/>
         </LinearLayout>
 
+
         <View
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"/>
+
 
         <LinearLayout
             android:layout_weight="1"
@@ -251,6 +241,7 @@
                 android:textSize="12sp"
                 android:fontFamily="sans-serif-condensed"/>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_weight="1"

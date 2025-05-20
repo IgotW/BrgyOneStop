@@ -27,7 +27,7 @@
                 android:textStyle="bold"
                 android:textSize="22sp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="80dp" />
+                android:layout_marginLeft="50dp" />
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
@@ -35,9 +35,10 @@
             android:text="Choose who you need to contact in this emergency. Press the button below in case of an emergency to alert barangay responders."
             android:textStyle="italic"
             android:textColor="#686565"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="15sp"
-            android:padding="10dp"/>
+            android:textSize="13sp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -52,39 +53,48 @@
             android:layout_marginLeft="10dp"/>
         <Button
             android:id="@+id/call_police"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/secondary_button"
+            android:background="@drawable/rounded_shape"
             android:text="CALL POLICE"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"/>
         <Button
             android:id="@+id/call_fire"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/secondary_button"
+            android:background="@drawable/rounded_shape"
             android:text="CALL FIRE DEPARTMENT"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"/>
         <Button
             android:id="@+id/call_ambulance"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/secondary_button"
+            android:background="@drawable/rounded_shape"
             android:text="CALL AMBULANCE"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"/>
         <Button
             android:id="@+id/call_tanod"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:backgroundTint="@color/secondary_button"
             android:text="ALERT BARANGAY TANOD"
-            android:textColor="@color/white"/>
+            android:background="@drawable/rounded_shape"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"/>
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="20dp"
+            android:layout_gravity="center"
             android:text="Note: Use this button for genuine emergencies only. Misuse may result in penalties."
             android:textStyle="italic"
             android:textColor="#686565"
@@ -103,6 +113,7 @@
         android:weightSum="5"
         android:layout_alignParentBottom="true"
         android:elevation="4dp">
+
 
         <LinearLayout
             android:id="@+id/home_nav"
@@ -123,6 +134,7 @@
                 android:fontFamily="sans-serif-condensed"/>
         </LinearLayout>
 
+
         <LinearLayout
             android:id="@+id/inbox_nav"
             android:layout_weight="1"
@@ -142,10 +154,12 @@
                 android:fontFamily="sans-serif-condensed"/>
         </LinearLayout>
 
+
         <View
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"/>
+
 
         <LinearLayout
             android:id="@+id/history_nav"
@@ -165,6 +179,7 @@
                 android:textSize="12sp"
                 android:fontFamily="sans-serif-condensed"/>
         </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/profile_nav"

@@ -50,8 +50,7 @@ class ReportIncidentActivity : AppCompatActivity() {
             startActivity(intent)
         }
         val dateText = findViewById<EditText>(R.id.show_datetext)
-        val datePickerIcon = findViewById<ImageView>(R.id.date_picker)
-        datePickerIcon.setOnClickListener {
+        dateText.setOnClickListener {
             val currentDate = Calendar.getInstance()
             DatePickerDialog(
                 this,
@@ -69,8 +68,7 @@ class ReportIncidentActivity : AppCompatActivity() {
 
         // Time Picker
         val timeText = findViewById<EditText>(R.id.show_timetext)
-        val timePickerIcon = findViewById<ImageView>(R.id.time_picker)
-        timePickerIcon.setOnClickListener {
+        timeText.setOnClickListener {
             val currentTime = Calendar.getInstance()
             TimePickerDialog(
                 this,

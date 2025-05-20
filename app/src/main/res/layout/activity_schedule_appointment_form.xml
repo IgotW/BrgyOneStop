@@ -27,7 +27,7 @@
                 android:textStyle="bold"
                 android:textSize="22sp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="50dp" />
+                android:layout_marginLeft="30dp" />
         </LinearLayout>
         <ScrollView
             android:layout_width="match_parent"
@@ -41,91 +41,105 @@
                     android:layout_height="90dp"
                     android:textStyle="italic"
                     android:textColor="#686565"
-                    android:textSize="15sp"
-                    android:paddingLeft="13dp"
-                    android:paddingRight="13dp"
+                    android:textSize="13sp"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="4dp"
                     android:layout_marginTop="10dp"
                     android:text="The available dates and time slots displayed below are based on the official working hours of the barangay and the remaining available slots for each service. Once a time slot is fully booked, it will no longer appear in the list." />
                 <LinearLayout
-                    android:layout_width="380dp"
+                    android:layout_width="325dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="@color/second_background"
+                    android:backgroundTint="@color/second_background"
+                    android:background="@drawable/rounded_shape"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:padding="15dp">
+                    android:padding="20dp">
+
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="35dp"
-                        android:text="Title: "
-                        android:fontFamily="sans-serif-condensed"
+                        android:text="Title"
                         android:textSize="17sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"/>
                     <EditText
                         android:id="@+id/scheduleappointment_title"
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:background="@color/white"
+                        android:hint="Enter Title"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/rounded_shape"
                         android:layout_gravity="center"
-                        android:hint="Enter Title"/>
+                        android:padding="10dp"
+                        android:textSize="15sp"/>
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="35dp"
                         android:text="Choose Date "
                         android:textSize="17sp"
                         android:layout_marginTop="25dp"
+                        android:textStyle="bold"
                         android:fontFamily="sans-serif-condensed"/>
                     <EditText
                         android:id="@+id/scheduleappointment_date"
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:hint="Choose Prefered Date"
-                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/rounded_shape"
                         android:layout_gravity="center"
-                        android:padding="7dp"/>
+                        android:padding="10dp"
+                        android:textSize="15sp"/>
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="35dp"
                         android:text="Choose Time: "
                         android:textSize="17sp"
                         android:layout_marginTop="25dp"
+                        android:textStyle="bold"
                         android:fontFamily="sans-serif-condensed"/>
                     <EditText
                         android:id="@+id/scheduleappointment_time"
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:hint="Choose Prefered Time"
                         android:layout_gravity="center"
-                        android:background="@color/white"
-                        android:padding="7dp"/>
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/rounded_shape"
+                        android:padding="10dp"
+                        android:textSize="15sp"/>
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="35dp"
                         android:text="What for? "
                         android:textSize="17sp"
                         android:layout_marginTop="25dp"
-                        android:fontFamily="sans-serif-condensed"/>
+                        android:textStyle="bold"/>
                     <EditText
                         android:id="@+id/scheduleappointment_purpose"
-                        android:layout_width="330dp"
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:hint="Describe purpose"
-                        android:background="@color/white"
+                        android:hint="Enter reason"
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/rounded_shape"
                         android:layout_gravity="center"
-                        android:padding="7dp"
+                        android:padding="10dp"
+                        android:textSize="15sp"
                         android:layout_marginBottom="20dp"/>
                 </LinearLayout>
                 <Button
                     android:id="@+id/scheduleappointment_button"
-                    android:layout_width="300dp"
+                    android:layout_width="250dp"
                     android:layout_height="50dp"
+                    android:backgroundTint="@color/primary_button"
                     android:text="SCHEDULE APPOINTMENT"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
                     android:background="@drawable/rounded_shape"
-                    android:backgroundTint="@color/primary"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
                     android:textColor="@color/white"/>
                 <View
                     android:layout_width="match_parent"
@@ -133,113 +147,4 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:weightSum="5"
-        android:layout_alignParentBottom="true"
-        android:elevation="4dp">
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-            <ImageView
-                android:src="@drawable/home"
-                android:layout_width="24dp"
-                android:layout_height="24dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Home"
-                android:textSize="12sp"
-                android:fontFamily="sans-serif-condensed"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-            <ImageView
-                android:src="@drawable/inbox"
-                android:layout_width="24dp"
-                android:layout_height="24dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Inbox"
-                android:textSize="12sp"
-                android:fontFamily="sans-serif-condensed"/>
-        </LinearLayout>
-
-        <View
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-            <ImageView
-                android:src="@drawable/history"
-                android:layout_width="24dp"
-                android:layout_height="24dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="History"
-                android:textSize="12sp"
-                android:fontFamily="sans-serif-condensed"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-            <ImageView
-                android:src="@drawable/profile"
-                android:layout_width="24dp"
-                android:layout_height="24dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profile"
-                android:textSize="12sp"
-                android:fontFamily="sans-serif-condensed"/>
-        </LinearLayout>
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/emergencyButton"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/call"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp"
-        android:elevation="8dp"
-        android:padding="3dp"/>
-    <TextView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:elevation="8dp"
-        android:text="Call"
-        android:layout_marginBottom="7dp"
-        android:textSize="12sp"
-        android:fontFamily="sans-serif-condensed"/>
-
 </RelativeLayout>
